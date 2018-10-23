@@ -350,6 +350,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Uni Game.csproj">
+      <Project>{B6ED3EDC-9B91-FC25-9805-79A62EBF690F}</Project>
+      <Name>Uni Game</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="C:\Users\jwood20\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.standardevents@1.0.13\Editor\Importer.cs" />
   </ItemGroup>
   <ItemGroup>
