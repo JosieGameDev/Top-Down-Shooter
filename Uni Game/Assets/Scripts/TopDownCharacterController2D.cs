@@ -6,6 +6,8 @@ public class TopDownCharacterController2D : MonoBehaviour {
 
     public float speed = 5.0f;
     Rigidbody2D rigidbody2D;
+    public bool isWalking;
+    SpriteRenderer spriterender;
 
 
 	// Use this for initialization
@@ -20,5 +22,30 @@ public class TopDownCharacterController2D : MonoBehaviour {
 
         rigidbody2D.velocity = new Vector2(x, y) * speed;
         rigidbody2D.angularVelocity = 0.0f;
+
+        //sprite rotation 
+        spriterender = GetComponent<SpriteRenderer>();
+        if (x < 0)
+        {
+            spriterender.flipX = true;
+
+        }
+        else if (x > 0)
+        {
+            spriterender.flipX = false;
+        }
+                
+
+
+        //setting walking state for anim purposes
+
+        if ((x != 0) && (y != 0))
+        {
+            isWalking = true;
+        }
+        else
+        {
+            isWalking = false;
+        }
 	}
 }
