@@ -44,6 +44,9 @@ TagManager:
   - name: Ground
     uniqueID: 2749120113
     locked: 0
+  - name: Gun
+    uniqueID: 3737694513
+    locked: 0
   - name: Player
     uniqueID: 975340521
     locked: 0
