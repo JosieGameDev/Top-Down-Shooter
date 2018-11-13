@@ -8,7 +8,7 @@ public class OnDamagedEvent : UnityEvent<int> { }
 
 public class HealthSystem1 : MonoBehaviour {
 
-    public int health = 10;
+    public int health = 100;
     public UnityEvent onDie;
     public OnDamagedEvent onDamaged;
 
