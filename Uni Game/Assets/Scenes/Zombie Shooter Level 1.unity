@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 295662613}
   - component: {fileID: 295662614}
   - component: {fileID: 295662615}
+  - component: {fileID: 295662616}
   m_Layer: 0
   m_Name: gun firing anim_0
   m_TagString: Untagged
@@ -136,14 +137,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 295662612}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -0.025, y: -0.158, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 2113302656}
   m_Father: {fileID: 1327065872}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &295662614
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -203,6 +204,27 @@ MonoBehaviour:
   theCamera: {fileID: 519420031}
   smoothing: 5
   adjustmentAngle: 0
+  gun: {fileID: 295662612}
+--- !u!50 &295662616
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295662612}
+  m_BodyType: 0
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &295880837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,8 +1613,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 5, y: 2, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -1609,7 +1631,7 @@ Tilemap:
       m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 71aca59b658a0844f82337ed51c7c7ff, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: bcbd5815eb302dc4ab7f58aefa1fceb3, type: 2}
@@ -1617,8 +1639,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: e6c921600dae1004e86018b1ef01cf1e, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: c25a008fd5e5c634696c13fb120f9e27, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 867764661e80b434ca22cb4fc5a397ea, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data: {fileID: 21300000, guid: e9cf0f7da878dac45aa4d1cbebcfb686, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 21300002, guid: e9cf0f7da878dac45aa4d1cbebcfb686, type: 3}
@@ -1626,6 +1650,8 @@ Tilemap:
     m_Data: {fileID: 21300004, guid: e9cf0f7da878dac45aa4d1cbebcfb686, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300010, guid: e9cf0f7da878dac45aa4d1cbebcfb686, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 8b6e496a72ab5e74a96904ef0178da76, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 23
     m_Data:
@@ -1820,7 +1846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &840168414
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1928,6 +1954,10 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1454751987384060, guid: f250f0cbb1f48434dab82c90ef422aef, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f250f0cbb1f48434dab82c90ef422aef, type: 2}
   m_IsPrefabParent: 0
@@ -1987,7 +2017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1013956701
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2168,6 +2198,7 @@ MonoBehaviour:
   theCamera: {fileID: 519420031}
   smoothing: 20
   adjustmentAngle: -90
+  gun: {fileID: 0}
 --- !u!114 &1327065868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2378,7 +2409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1872043860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2623,6 +2654,7 @@ MonoBehaviour:
   theCamera: {fileID: 519420031}
   smoothing: 20
   adjustmentAngle: -90
+  gun: {fileID: 0}
 --- !u!114 &2047234333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2678,7 +2710,7 @@ GameObject:
   m_Layer: 0
   m_Name: BulletSpawn
   m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
