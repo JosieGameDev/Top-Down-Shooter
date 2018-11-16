@@ -1948,7 +1948,7 @@ GameObject:
   m_Layer: 0
   m_Name: BulletSpawn
   m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2090,7 +2090,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1454751987384060, guid: f250f0cbb1f48434dab82c90ef422aef, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f250f0cbb1f48434dab82c90ef422aef, type: 2}
