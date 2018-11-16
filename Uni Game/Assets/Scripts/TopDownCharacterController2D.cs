@@ -5,7 +5,7 @@ using UnityEngine;
 public class TopDownCharacterController2D : MonoBehaviour {
 
     public float speed = 5.0f;
-    Rigidbody2D rigidbody2D;
+    public Rigidbody2D rigidbody2D;
     public bool isWalking;
     SpriteRenderer spriterender;
     Animator animator;
