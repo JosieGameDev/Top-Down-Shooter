@@ -9,6 +9,10 @@ public class MouseSmoothLook2D : MonoBehaviour {
     public float adjustmentAngle = 0.0f;
     public GameObject gun;
     SpriteRenderer spriteGun;
+    public SpriteRenderer spritePlayer;
+    Vector3 gunFaceLeft;
+    Vector3 gunFaceRight;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +30,10 @@ public class MouseSmoothLook2D : MonoBehaviour {
         Quaternion newRotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, rotZ + adjustmentAngle));
         transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, Time.deltaTime * smoothing);
 
+        //code to flip x pos of the gun and arm 
+        gunFaceLeft = new Vector3(-0.12f, 0, 0);
+        gunFaceRight = new Vector3(0.12f, 0, 0);
+
         //run code to flip the gun if needed
         FlipGunAnim();
 
@@ -38,17 +46,21 @@ public class MouseSmoothLook2D : MonoBehaviour {
 
         //get srpite of gun 
         spriteGun = GetComponent<SpriteRenderer>();
-        
+
         //check rotation 
         if ((gun.transform.eulerAngles.z < 270 && gun.transform.eulerAngles.z > 90))
         {
             //flip image in these conditions
             spriteGun.flipY = true;
+            spritePlayer.flipX = true;
+            spriteGun.transform.localPosition = new Vector3(-0.2f, -0.18f, 0);
+
         }
         else
         {
             spriteGun.flipY = false;
+            spritePlayer.flipX = false;
+            spriteGun.transform.localPosition = new Vector3(0.2f, -0.18f, 0);
         }
-                
     }
 }

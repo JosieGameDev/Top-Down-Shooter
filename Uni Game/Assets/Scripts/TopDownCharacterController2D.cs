@@ -6,13 +6,16 @@ public class TopDownCharacterController2D : MonoBehaviour {
 
     public float speed = 5.0f;
     Rigidbody2D rigidbody2D;
-    public bool isWalking;
+    bool playerWalking;
+    Animator animator;
+        
     SpriteRenderer spriterender;
 
 
 	// Use this for initialization
 	void Start () {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -39,13 +42,17 @@ public class TopDownCharacterController2D : MonoBehaviour {
 
         //setting walking state for anim purposes
 
-        if ((x != 0) && (y != 0))
+        if ((x != 0) || (y != 0))
         {
-            isWalking = true;
+            playerWalking = true;
+            animator.SetBool("playerWalking", playerWalking);
         }
         else
         {
-            isWalking = false;
+
+            Debug.Log(playerWalking);
+            playerWalking = false;
+            animator.SetBool("playerWalking", playerWalking);
         }
 	}
 }
