@@ -20,12 +20,15 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+<<<<<<< HEAD
   - m_Name: jackWalk
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+=======
+>>>>>>> parent of fb5bb26... improved shooting anim
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -125,18 +128,30 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
 --- !u!1101 &1101302934199561168
+=======
+--- !u!1101 &1101324721543606052
+>>>>>>> parent of fb5bb26... improved shooting anim
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
+<<<<<<< HEAD
   - m_ConditionMode: 2
     m_ConditionEvent: isFiring
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102102937764336922}
+=======
+  - m_ConditionMode: 1
+    m_ConditionEvent: 'isWalking '
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1102003864292399530}
+>>>>>>> parent of fb5bb26... improved shooting anim
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -149,30 +164,72 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
 --- !u!1101 &1101585275495909180
+=======
+--- !u!1101 &1101510004853960058
+>>>>>>> parent of fb5bb26... improved shooting anim
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
+<<<<<<< HEAD
   - m_ConditionMode: 1
     m_ConditionEvent: jackWalk
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102496376232044910}
+=======
+  - m_ConditionMode: 2
+    m_ConditionEvent: 'isWalking '
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1102181732277059186}
+>>>>>>> parent of fb5bb26... improved shooting anim
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
+<<<<<<< HEAD
   m_ExitTime: 0.5
+=======
+  m_ExitTime: 0.6753247
+>>>>>>> parent of fb5bb26... improved shooting anim
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &1102003864292399530
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: custom player walk
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 1101510004853960058}
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 4081b4f017508fc4b9dfb4ead3189dd8, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &1102102937764336922
 AnimatorState:
   serializedVersion: 5
@@ -199,6 +256,32 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1102 &1102181732277059186
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: custom idle
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 1101324721543606052}
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 4081b4f017508fc4b9dfb4ead3189dd8, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &1102434888600568650
 AnimatorState:
   serializedVersion: 5
@@ -209,58 +292,11 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
-  - {fileID: 1101302934199561168}
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6b9dc9e113823394aa2ce761bb236493, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &1102453657229725080
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: gun firing
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6b9dc9e113823394aa2ce761bb236493, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &1102496376232044910
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: improved player walk w gun
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions:
+<<<<<<< HEAD
   - {fileID: 1101297276464161602}
+=======
+  - {fileID: 1101302934199561168}
+>>>>>>> parent of fb5bb26... improved shooting anim
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -270,23 +306,34 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7849618cfdd111c408f3984e61e10aef, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6b9dc9e113823394aa2ce761bb236493, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+<<<<<<< HEAD
 --- !u!1102 &1102520762534325446
+=======
+--- !u!1102 &1102453657229725080
+>>>>>>> parent of fb5bb26... improved shooting anim
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
   m_Name: custom idle FINAL
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101585275495909180}
+=======
+  m_Name: gun firing
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+>>>>>>> parent of fb5bb26... improved shooting anim
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -296,7 +343,11 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
+<<<<<<< HEAD
   m_Motion: {fileID: 7400000, guid: cf1e55482a79bf540936718a01131d25, type: 2}
+=======
+  m_Motion: {fileID: 7400000, guid: 6b9dc9e113823394aa2ce761bb236493, type: 2}
+>>>>>>> parent of fb5bb26... improved shooting anim
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -354,25 +405,38 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 1102453657229725080}
-    m_Position: {x: 648, y: 204, z: 0}
+    m_State: {fileID: 1102003864292399530}
+    m_Position: {x: 480, y: 72, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 1102496376232044910}
-    m_Position: {x: 516, y: 60, z: 0}
+    m_State: {fileID: 1102181732277059186}
+    m_Position: {x: 264, y: 144, z: 0}
   - serializedVersion: 1
+<<<<<<< HEAD
     m_State: {fileID: 1102520762534325446}
     m_Position: {x: 287, y: 269, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions:
   - {fileID: 1109106095182976814}
+=======
+    m_State: {fileID: 1102453657229725080}
+    m_Position: {x: 648, y: 204, z: 0}
+  m_ChildStateMachines: []
+  m_AnyStateTransitions: []
+  m_EntryTransitions:
+  - {fileID: 1109090259357219914}
+>>>>>>> parent of fb5bb26... improved shooting anim
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 372, y: -24, z: 0}
-  m_EntryPosition: {x: -12, y: 168, z: 0}
+  m_EntryPosition: {x: 24, y: 216, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+<<<<<<< HEAD
   m_DefaultState: {fileID: 1102520762534325446}
+=======
+  m_DefaultState: {fileID: 1102181732277059186}
+>>>>>>> parent of fb5bb26... improved shooting anim
 --- !u!1107 &1107675427934058004
 AnimatorStateMachine:
   serializedVersion: 5
@@ -397,7 +461,11 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1102102937764336922}
+<<<<<<< HEAD
 --- !u!1109 &1109106095182976814
+=======
+--- !u!1109 &1109090259357219914
+>>>>>>> parent of fb5bb26... improved shooting anim
 AnimatorTransition:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -405,7 +473,11 @@ AnimatorTransition:
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
+<<<<<<< HEAD
   m_DstState: {fileID: 1102520762534325446}
+=======
+  m_DstState: {fileID: 1102181732277059186}
+>>>>>>> parent of fb5bb26... improved shooting anim
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
