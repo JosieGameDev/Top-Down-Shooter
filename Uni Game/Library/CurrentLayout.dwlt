@@ -13,42 +13,116 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 877
-    y: 51
-    width: 1681
-    height: 1348
-  m_ShowMode: 4
-  m_Title: 
-  m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 592}
-=======
     x: 0
     y: 43
     width: 1536
     height: 781
   m_ShowMode: 4
   m_Title: 
-  m_RootView: {fileID: 2}
-<<<<<<< HEAD
-  m_MinSize: {x: 950, y: 300}
-=======
-  m_MinSize: {x: 950, y: 663}
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
-    x: 8
-    y: 51
-    width: 1520
-    height: 765
-  m_ShowMode: 4
-  m_Title: 
-  m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
->>>>>>> parent of fb5bb26... improved shooting anim
+  m_RootView: {fileID: 6}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 9}
+  - {fileID: 3}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1536
+    height: 731
+  m_MinSize: {x: 681, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 43
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1225
+    y: 0
+    width: 311
+    height: 731
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 303
+    height: 442
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 442
+    width: 1225
+    height: 289
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 13}
+  m_Panes:
+  - {fileID: 13}
+  - {fileID: 18}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -60,28 +134,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 3}
-  - {fileID: 5}
-  - {fileID: 4}
+  - {fileID: 7}
+  - {fileID: 2}
+  - {fileID: 8}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 1681
-    height: 1348
-=======
     width: 1536
     height: 781
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-=======
-    width: 1520
-    height: 765
->>>>>>> parent of fb5bb26... improved shooting anim
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
---- !u!114 &3
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -97,20 +161,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 1681
-=======
     width: 1536
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-=======
-    width: 1520
->>>>>>> parent of fb5bb26... improved shooting anim
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &4
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -125,209 +181,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    y: 1328
-    width: 1681
-=======
     y: 761
     width: 1536
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-=======
-    y: 745
-    width: 1520
->>>>>>> parent of fb5bb26... improved shooting anim
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &5
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 6}
-  - {fileID: 13}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 30
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 1681
-    height: 1298
-  m_MinSize: {x: 723, y: 542}
-  m_MaxSize: {x: 12008, y: 12042}
-  vertical: 0
-  controlID: 59
-=======
-    width: 1536
-    height: 731
-  m_MinSize: {x: 681, y: 592}
-  m_MaxSize: {x: 14004, y: 18042}
-  vertical: 0
-<<<<<<< HEAD
-  controlID: 111
-=======
-  controlID: 150
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
-    width: 1520
-    height: 715
-  m_MinSize: {x: 681, y: 613}
-  m_MaxSize: {x: 14002, y: 18063}
-  vertical: 0
-  controlID: 133
->>>>>>> parent of fb5bb26... improved shooting anim
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 7}
-  - {fileID: 12}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 1162
-    height: 1298
-  m_MinSize: {x: 446, y: 542}
-  m_MaxSize: {x: 8006, y: 12042}
-  vertical: 1
-  controlID: 60
-=======
-    width: 1201
-    height: 731
-  m_MinSize: {x: 404, y: 592}
-  m_MaxSize: {x: 10002, y: 18042}
-  vertical: 1
-<<<<<<< HEAD
-  controlID: 62
-=======
-  controlID: 72
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
-    width: 1188
-    height: 715
-  m_MinSize: {x: 406, y: 613}
-  m_MaxSize: {x: 10002, y: 18063}
-  vertical: 1
-  controlID: 15
->>>>>>> parent of fb5bb26... improved shooting anim
---- !u!114 &7
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 8}
-  - {fileID: 11}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 1162
-    height: 991
-  m_MinSize: {x: 446, y: 421}
-  m_MaxSize: {x: 8006, y: 8021}
-  vertical: 0
-  controlID: 61
-=======
-    width: 1201
-    height: 460
-  m_MinSize: {x: 404, y: 321}
-  m_MaxSize: {x: 8006, y: 8021}
-  vertical: 0
-<<<<<<< HEAD
-  controlID: 63
-=======
-  controlID: 114
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
-    width: 1188
-    height: 450
-  m_MinSize: {x: 406, y: 342}
-  m_MaxSize: {x: 8006, y: 8042}
-  vertical: 0
-  controlID: 16
->>>>>>> parent of fb5bb26... improved shooting anim
---- !u!114 &8
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 9}
-  - {fileID: 10}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 580
-=======
-<<<<<<< HEAD
-    width: 338
-    height: 991
-  m_MinSize: {x: 242, y: 421}
-  m_MaxSize: {x: 4002, y: 8021}
-  vertical: 1
-  controlID: 34
-=======
-    width: 373
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-    height: 460
-  m_MinSize: {x: 200, y: 321}
-  m_MaxSize: {x: 4002, y: 8021}
-  vertical: 1
-<<<<<<< HEAD
-  controlID: 18
-=======
-  controlID: 46
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
-    width: 350
-    height: 450
-  m_MinSize: {x: 202, y: 342}
-  m_MaxSize: {x: 4002, y: 8042}
-  vertical: 1
-  controlID: 17
->>>>>>> parent of fb5bb26... improved shooting anim
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -336,37 +194,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children: []
+  m_Children:
+  - {fileID: 10}
+  - {fileID: 5}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 580
-=======
-<<<<<<< HEAD
-    width: 338
-    height: 723
-=======
-    width: 373
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-    height: 296
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-=======
-    width: 350
-    height: 234
->>>>>>> parent of fb5bb26... improved shooting anim
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 15}
-  m_Panes:
-  - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 0
+    width: 1225
+    height: 731
+  m_MinSize: {x: 406, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
+  vertical: 1
+  controlID: 44
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -375,43 +218,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children: []
+  m_Children:
+  - {fileID: 4}
+  - {fileID: 11}
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    y: 723
-    width: 338
-    height: 268
-  m_MinSize: {x: 240, y: 200}
-=======
-    y: 296
-    width: 580
-    height: 164
-<<<<<<< HEAD
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 16}
-=======
-=======
-    y: 234
-    width: 350
-    height: 216
->>>>>>> parent of fb5bb26... improved shooting anim
-  m_MinSize: {x: 100, y: 100}
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 17}
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-  m_Panes:
-  - {fileID: 16}
-  - {fileID: 17}
-  m_Selected: 1
-  m_LastSelected: 0
+    y: 0
+    width: 1225
+    height: 442
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
+  vertical: 0
+  controlID: 102
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -426,37 +248,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 580
-=======
-<<<<<<< HEAD
-    x: 338
+    x: 303
     y: 0
-    width: 824
-    height: 991
-=======
-    x: 373
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-    y: 0
-    width: 621
-    height: 460
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-=======
-    x: 350
-    y: 0
-    width: 838
-    height: 450
->>>>>>> parent of fb5bb26... improved shooting anim
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
-  m_ActualView: {fileID: 19}
+    width: 922
+    height: 442
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 18}
-  - {fileID: 19}
-  - {fileID: 20}
-  m_Selected: 1
-  m_LastSelected: 0
+  - {fileID: 16}
+  - {fileID: 17}
+  - {fileID: 12}
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -465,92 +269,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
+  m_MinSize: {x: 400, y: 100}
+  m_MaxSize: {x: 2048, y: 2048}
+  m_TitleContent:
+    m_Text: Asset Store
+    m_Image: {fileID: 357073275683767465, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
     serializedVersion: 2
-    x: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    y: 991
-    width: 1162
-    height: 307
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 22}
-=======
-    y: 460
-    width: 1201
-    height: 271
-=======
-    y: 450
-    width: 1188
-    height: 265
->>>>>>> parent of fb5bb26... improved shooting anim
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 14}
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-  m_Panes:
-  - {fileID: 21}
-  - {fileID: 14}
-  - {fileID: 22}
-<<<<<<< HEAD
-  m_Selected: 2
-  m_LastSelected: 1
-=======
-  m_Selected: 1
-<<<<<<< HEAD
-  m_LastSelected: 0
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-=======
-  m_LastSelected: 2
->>>>>>> parent of fb5bb26... improved shooting anim
+    x: 468
+    y: 181
+    width: 973
+    height: 501
+  m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &13
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 1162
-    y: 0
-    width: 519
-    height: 1298
-=======
-    x: 1201
-    y: 0
-    width: 335
-    height: 731
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
-=======
-    x: 1188
-    y: 0
-    width: 332
-    height: 715
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
->>>>>>> parent of fb5bb26... improved shooting anim
-  m_ActualView: {fileID: 23}
-  m_Panes:
-  - {fileID: 23}
-  - {fileID: 24}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -565,29 +301,15 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -7501376956915960154, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 877
-    y: 1091
-    width: 1160
-    height: 286
-=======
     x: 0
-    y: 552
-    width: 1199
-    height: 250
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-=======
-    x: 8
-    y: 550
-    width: 1186
-    height: 244
->>>>>>> parent of fb5bb26... improved shooting anim
+    y: 534
+    width: 1223
+    height: 268
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -601,59 +323,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-<<<<<<< HEAD
-<<<<<<< HEAD
-    - Assets/Sprites
-=======
-    - Assets/Sprites/player
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-=======
     - Assets/Scripts
->>>>>>> parent of fb5bb26... improved shooting anim
   m_ViewMode: 1
-  m_StartGridSize: 16
+  m_StartGridSize: 64
   m_LastFolders:
-<<<<<<< HEAD
-<<<<<<< HEAD
-  - Assets/Sprites
-  m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\jwood20\Documents\GitHub\Top-Down-Shooter\Uni Game
-  m_LockTracker:
-    m_IsLocked: 0
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d02c0000
-    m_LastClickedID: 11472
-    m_ExpandedIDs: 00000000702b000000ca9a3bffffff7f
-=======
-  - Assets/Sprites/player
-  m_LastFoldersGridSize: 67
-=======
   - Assets/Scripts
-  m_LastFoldersGridSize: 16
->>>>>>> parent of fb5bb26... improved shooting anim
+  m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Josie\Documents\GitHub\Top-Down-Shooter\Uni Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-<<<<<<< HEAD
-    scrollPos: {x: 0, y: 18.215054}
-<<<<<<< HEAD
-    m_SelectedIDs: 060b0000
-    m_LastClickedID: 2822
-    m_ExpandedIDs: 00000000fa080000a60a000000ca9a3bffffff7f
-=======
-    m_SelectedIDs: 3e2e0000
-    m_LastClickedID: 11838
-    m_ExpandedIDs: 00000000fa0800008c0a000000ca9a3bffffff7f
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: bc2b0000
-    m_LastClickedID: 11196
-    m_ExpandedIDs: 000000006a2b000000ca9a3bffffff7f
->>>>>>> parent of fb5bb26... improved shooting anim
+    m_SelectedIDs: c42a0000
+    m_LastClickedID: 10948
+    m_ExpandedIDs: 000000005c2a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -681,19 +364,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_ExpandedIDs: 00000000fa080000a60a0000
-=======
-<<<<<<< HEAD
-    m_ExpandedIDs: 00000000702b0000
-=======
-    m_ExpandedIDs: 00000000fa080000
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
-    m_ExpandedIDs: 000000006a2b0000
->>>>>>> parent of fb5bb26... improved shooting anim
+    m_ExpandedIDs: 000000005c2a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -718,43 +389,26 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-<<<<<<< HEAD
-    m_SelectedInstanceIDs: d02e0000
-    m_LastClickedInstanceID: 11984
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300002e2c00004e2c0000422c0000f8290000222b0000382e0000e02c0000
-=======
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300002e2c00004e2c0000422c0000f8290000222b0000382e0000f02e0000f42e0000140b0000e02e0000
-=======
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c62300002e2c00004e2c0000422c0000f8290000222b0000382e0000f02e0000f42e0000140b0000
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300002e2c00004e2c0000422c0000f8290000222b0000382e0000
->>>>>>> parent of fb5bb26... improved shooting anim
+    m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: ShootyEnemyTest
-      m_OriginalName: ShootyEnemyTest
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 13154
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 12}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -762,20 +416,43 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-<<<<<<< HEAD
     m_ScrollPosition: {x: 0, y: 0}
-<<<<<<< HEAD
-    m_GridSize: 16
-  m_DirectoriesAreaWidth: 116
-=======
-    m_GridSize: 67
-  m_DirectoriesAreaWidth: 177
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-=======
-    m_ScrollPosition: {x: 0, y: 37.5}
-    m_GridSize: 16
-  m_DirectoriesAreaWidth: 116
->>>>>>> parent of fb5bb26... improved shooting anim
+    m_GridSize: 64
+  m_DirectoriesAreaWidth: 115
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -6905738622615590433, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1227
+    y: 92
+    width: 309
+    height: 710
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewResizer:
+    m_CachedPref: 160
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_PreviewWindow: {fileID: 0}
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -791,69 +468,37 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 877
-    y: 100
-    width: 336
-    height: 702
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 6c2efdff782efdff00f9ffff00000000b42e0000d02e0000f22e0000
-=======
     x: 0
     y: 92
-    width: 578
-    height: 275
+    width: 301
+    height: 421
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
-    m_SelectedIDs: 
+    m_SelectedIDs: 902c0000
     m_LastClickedID: 0
-    m_ExpandedIDs: f0fbffff00000000
-=======
-    m_SelectedIDs: e40c0000
-    m_LastClickedID: 3300
-    m_ExpandedIDs: 58a3ffff5aa3fffff0fbffff00000000e40c0000f00c0000
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
-    x: 8
-    y: 100
-    width: 348
-    height: 213
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_TreeViewState:
-    scrollPos: {x: 0, y: 12}
-    m_SelectedIDs: 98defeff
-    m_LastClickedID: -74088
-    m_ExpandedIDs: 24f2ffff00f9ffff00000000
->>>>>>> parent of fb5bb26... improved shooting anim
+    m_ExpandedIDs: 78efffff4af0ffff28f1ffffa0f9ffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Player new
-      m_OriginalName: Player new
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 3408
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 9}
+      m_ClientGUIView: {fileID: 0}
     m_SearchString: 
   m_ExpandedScenes:
   - Zombie Shooter Level 1
@@ -869,91 +514,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Animation
-    m_Image: {fileID: -8166618308981325432, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 877
-    y: 823
-    width: 336
-    height: 247
-=======
-    x: 0
-    y: 388
-    width: 578
-    height: 143
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-=======
-    x: 8
-    y: 334
-    width: 348
-    height: 195
->>>>>>> parent of fb5bb26... improved shooting anim
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_AnimEditor: {fileID: 0}
-  m_LockTracker:
-    m_IsLocked: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_LastSelectedObjectID: 3378
-=======
-<<<<<<< HEAD
-  m_LastSelectedObjectID: -621196
-=======
-  m_LastSelectedObjectID: 3300
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
-  m_LastSelectedObjectID: -74088
->>>>>>> parent of fb5bb26... improved shooting anim
---- !u!114 &17
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12390, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 240, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Tile Palette
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 877
-    y: 823
-    width: 336
-    height: 247
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_PreviewResizer:
-    m_CachedPref: -50
-    m_ControlHash: 510661707
-    m_PrefName: Preview_TilemapBrushInspector
-  m_Palette: {fileID: 1003543509970390, guid: 2ad038e19b36dca49a6876393d64b454, type: 2}
-  m_Target: {fileID: 0}
---- !u!114 &18
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
   m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -961,71 +521,25 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 2318424515335265636, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 582
-=======
-<<<<<<< HEAD
-    x: 1217
-    y: 100
-    width: 820
-    height: 970
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_SceneLighting: 1
-  lastFramingTime: 7499.6133380643905
-=======
-    x: 375
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
+    x: 305
     y: 92
-    width: 617
-    height: 439
+    width: 918
+    height: 421
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-<<<<<<< HEAD
-  lastFramingTime: 539.5691993771363
-=======
-  lastFramingTime: 8906.388623521774
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
-    x: 360
-    y: 100
-    width: 834
-    height: 429
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_SceneLighting: 1
-  lastFramingTime: 6943.907423620732
->>>>>>> parent of fb5bb26... improved shooting anim
+  lastFramingTime: 0
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_Target: {x: -3.9380224, y: -1.453698, z: -0.016770668}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: -3.9380224, y: -1.453698, z: -0.016770668}
-=======
-<<<<<<< HEAD
-    m_Target: {x: -2.407103, y: -0.22002561, z: -0.041015625}
-    speed: 2
-    m_Value: {x: -2.407103, y: -0.22002561, z: -0.041015625}
-=======
-    m_Target: {x: 6.7854924, y: 0.9442345, z: -0.07629645}
-    speed: 2
-    m_Value: {x: 6.7854924, y: 0.9442345, z: -0.07629645}
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
-    m_Target: {x: 1.3651003, y: -1.4693751, z: -0.09147902}
-    speed: 2
-    m_Value: {x: 1.3651003, y: -1.4693751, z: -0.09147902}
->>>>>>> parent of fb5bb26... improved shooting anim
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1057,27 +571,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_Target: 4.197741
+    m_Target: 10
     speed: 2
-    m_Value: 4.197741
-=======
-<<<<<<< HEAD
-    m_Target: 8.646884
-    speed: 2
-    m_Value: 8.646884
-=======
-    m_Target: 13.50182
-    speed: 2
-    m_Value: 13.50182
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
-    m_Target: 13.923377
-    speed: 2
-    m_Value: 13.923377
->>>>>>> parent of fb5bb26... improved shooting anim
+    m_Value: 10
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1089,7 +585,7 @@ MonoBehaviour:
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &19
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -1104,33 +600,15 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -2087823869225018852, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 582
-=======
-<<<<<<< HEAD
-    x: 1217
-    y: 100
-    width: 820
-    height: 970
-=======
-    x: 375
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-    y: 92
-    width: 617
-    height: 439
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-=======
-    x: 360
-    y: 100
-    width: 834
-    height: 429
->>>>>>> parent of fb5bb26... improved shooting anim
+    x: 507
+    y: 94
+    width: 1532
+    height: 790
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -1140,36 +618,17 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_HBaseRangeMin: -308.5
-    m_HBaseRangeMax: 308.5
-=======
-<<<<<<< HEAD
-    m_HBaseRangeMin: -410
-    m_HBaseRangeMax: 410
-    m_VBaseRangeMin: -476.5
-    m_VBaseRangeMax: 476.5
-=======
-    m_HBaseRangeMin: -412
-    m_HBaseRangeMax: 412
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-    m_VBaseRangeMin: -211
-    m_VBaseRangeMax: 211
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-=======
-    m_HBaseRangeMin: -417
-    m_HBaseRangeMax: 417
-    m_VBaseRangeMin: -206
-    m_VBaseRangeMax: 206
->>>>>>> parent of fb5bb26... improved shooting anim
+    m_HBaseRangeMin: -766
+    m_HBaseRangeMax: 766
+    m_VBaseRangeMin: -386.5
+    m_VBaseRangeMax: 386.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 1
-    m_VSlider: 1
+    m_HSlider: 0
+    m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoom: 0
@@ -1179,246 +638,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-<<<<<<< HEAD
-<<<<<<< HEAD
-      width: 617
-      height: 422
-    m_Scale: {x: 3, y: 3}
-    m_Translation: {x: 915.95886, y: -8.279619}
-=======
-<<<<<<< HEAD
-      width: 820
-      height: 953
+      width: 1532
+      height: 773
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 410, y: 476.5}
-=======
-      width: 824
-      height: 422
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 412, y: 211}
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
-      width: 834
-      height: 412
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 417, y: 206}
->>>>>>> parent of fb5bb26... improved shooting anim
+    m_Translation: {x: 766, y: 386.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-      x: -305.3196
-      y: 2.7598732
-      width: 205.66667
-      height: 140.66667
-=======
-<<<<<<< HEAD
-      x: -410
-      y: -476.5
-      width: 820
-      height: 953
-=======
-      x: -412
-      y: -211
-      width: 824
-      height: 422
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
-      x: -417
-      y: -206
-      width: 834
-      height: 412
->>>>>>> parent of fb5bb26... improved shooting anim
+      x: -766
+      y: -386.5
+      width: 1532
+      height: 773
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
-  m_CurrentColorSpace: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_LastWindowPixelSize: {x: 617, y: 439}
-=======
-<<<<<<< HEAD
-  m_LastWindowPixelSize: {x: 820, y: 970}
-=======
-  m_LastWindowPixelSize: {x: 824, y: 439}
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
->>>>>>> dc2dc0701f55c0a5443171adc7691872d099face
-=======
-  m_LastWindowPixelSize: {x: 834, y: 429}
->>>>>>> parent of fb5bb26... improved shooting anim
+  m_CurrentColorSpace: 1
+  m_LastWindowPixelSize: {x: 1532, y: 790}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
---- !u!114 &20
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 400, y: 100}
-  m_MaxSize: {x: 2048, y: 2048}
-  m_TitleContent:
-    m_Text: Asset Store
-    m_Image: {fileID: -8693916549880196297, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 468
-    y: 181
-    width: 973
-    height: 501
-  m_PersistentViewDataDictionary: {fileID: 0}
---- !u!114 &21
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Animator
-    m_Image: {fileID: 663490763026382308, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 552
-    width: 1199
-    height: 250
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_ViewTransforms:
-    m_KeySerializationHelper:
-    - {fileID: 1107446595059660304, guid: 190c7b4974b095442abd4ae863119a22, type: 2}
-    - {fileID: 1107602972139599848, guid: 9e8a139ab5d5dde42ab5285799bf6d88, type: 2}
-    - {fileID: 1107675427934058004, guid: 9e8a139ab5d5dde42ab5285799bf6d88, type: 2}
-    - {fileID: 1107542757428540020, guid: 9e8a139ab5d5dde42ab5285799bf6d88, type: 2}
-    - {fileID: 1107934860040172594, guid: dfceb2149e576ed4fba4ce658f3c85ff, type: 2}
-    m_ValueSerializationHelper:
-    - e00: 0.9142105
-      e01: 0
-      e02: 0
-      e03: -30.71051
-      e10: 0
-      e11: 0.9142105
-      e12: 0
-      e13: 29.792107
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-<<<<<<< HEAD
-    - e00: 0.5393586
-      e01: 0
-      e02: 0
-      e03: 183.18185
-      e10: 0
-      e11: 0.5393586
-      e12: 0
-      e13: 26.763832
-=======
-    - e00: 0.63793105
-      e01: 0
-      e02: 0
-      e03: 122.6293
-      e10: 0
-      e11: 0.63793105
-      e12: 0
-      e13: 30.31034
->>>>>>> parent of fb5bb26... improved shooting anim
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.6356625
-      e01: 0
-      e02: 0
-      e03: 142.87872
-      e10: 0
-      e11: 0.6356625
-      e12: 0
-      e13: -13.674805
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.68277043
-      e01: 0
-      e02: 0
-      e03: 31.979939
-      e10: 0
-      e11: 0.68277043
-      e12: 0
-      e13: 28.004837
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.9142105
-      e01: 0
-      e02: 0
-      e03: -30.71051
-      e10: 0
-      e11: 0.9142105
-      e12: 0
-      e13: 29.792107
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-  m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 0}
-  m_BreadCrumbs: []
-  stateMachineGraph: {fileID: 0}
-  stateMachineGraphGUI: {fileID: 0}
-  blendTreeGraph: {fileID: 0}
-  blendTreeGraphGUI: {fileID: 0}
-  m_AutoLiveLink: 1
-  m_MiniTool: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_CurrentEditor: 0
-  m_LayerEditor:
-    m_SelectedLayerIndex: 0
---- !u!114 &22
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -1433,113 +675,13 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
-    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 111653112392082826, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 877
-    y: 1091
-    width: 1160
-    height: 286
-=======
     x: 0
-    y: 546
-    width: 1199
-    height: 256
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-=======
-    x: 8
-    y: 550
-    width: 1186
-    height: 244
->>>>>>> parent of fb5bb26... improved shooting anim
+    y: 534
+    width: 1223
+    height: 268
   m_PersistentViewDataDictionary: {fileID: 0}
---- !u!114 &23
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 2041
-    y: 100
-    width: 517
-    height: 1277
-=======
-    x: 1203
-    y: 92
-    width: 333
-    height: 710
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-=======
-    x: 1198
-    y: 100
-    width: 330
-    height: 694
->>>>>>> parent of fb5bb26... improved shooting anim
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewResizer:
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_CachedPref: 244
-=======
-    m_CachedPref: 154
->>>>>>> fb5bb2647c24439305dd941913d18f0a5e7ef0d5
-=======
-    m_CachedPref: 139
->>>>>>> parent of fb5bb26... improved shooting anim
-    m_ControlHash: -371814159
-    m_PrefName: Preview_InspectorPreview
-  m_PreviewWindow: {fileID: 0}
---- !u!114 &24
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12157, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Services
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 2038
-    y: 100
-    width: 514
-    height: 1270
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_InitialOpenURL: https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
-  m_GlobalObjectTypeName: 
-  m_RegisteredViewURLs:
-  - https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
-  m_RegisteredViewInstances:
-  - {fileID: 0}
