@@ -10,8 +10,10 @@ public class MouseSmoothLook2D : MonoBehaviour {
     public GameObject gun;
     SpriteRenderer spriteGun;
     public SpriteRenderer spritePlayer;
-    Vector3 gunFaceLeft;
-    Vector3 gunFaceRight;
+
+    public GameObject bulletSpawnPoint;
+    //Vector3 gunFaceLeft;
+    //Vector3 gunFaceRight;
     
 
 	// Use this for initialization
@@ -31,8 +33,8 @@ public class MouseSmoothLook2D : MonoBehaviour {
         transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, Time.deltaTime * smoothing);
 
         //code to flip x pos of the gun and arm 
-        gunFaceLeft = new Vector3(-0.12f, 0, 0);
-        gunFaceRight = new Vector3(0.12f, 0, 0);
+        //gunFaceLeft = new Vector3(-0.12f, 0, 0);
+        //gunFaceRight = new Vector3(0.12f, 0, 0);
 
         //run code to flip the gun if needed
         FlipGunAnim();
@@ -54,13 +56,14 @@ public class MouseSmoothLook2D : MonoBehaviour {
             spriteGun.flipY = true;
             spritePlayer.flipX = true;
             spriteGun.transform.localPosition = new Vector3(-0.2f, -0.18f, 0);
-
+            bulletSpawnPoint.transform.localPosition = new Vector3(0.4f, -0.1f, 0);
         }
         else
         {
             spriteGun.flipY = false;
             spritePlayer.flipX = false;
             spriteGun.transform.localPosition = new Vector3(0.2f, -0.18f, 0);
+            bulletSpawnPoint.transform.localPosition = new Vector3(0.4f, 0.1f, 0);
         }
     }
 }
