@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1010303640873912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.49613, y: -3.3709292, z: 0}
+  m_LocalPosition: {x: 18.17, y: 4.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4508612772968050}
@@ -152,9 +152,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1948869061984594, guid: 5babaaef7e91f5b4cb169893021a68d2,
     type: 2}
   bulletSpawn: {fileID: 4209497582812690}
-  playerTransform: {fileID: 4009531823983650, guid: 156ab4945e5e4da4eaf8d1265f08530b,
-    type: 2}
-  raange: 15
+  playerTransform: {fileID: 0}
+  raange: 10
   nextFire: 0
   fireRate: 0.5
 --- !u!114 &114177978452297082
@@ -179,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e6d5a89f254e6e4d81f0f256a1c8d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4009531823983650, guid: 156ab4945e5e4da4eaf8d1265f08530b, type: 2}
+  target: {fileID: 0}
   smoothing: 5
   adjustmentAngle: -90
 --- !u!114 &114628818579789336
@@ -193,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55bfbbecc59e27a4ea708c0c9882910e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 10
   onDie:
     m_PersistentCalls:
       m_Calls:
@@ -294,7 +293,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300010, guid: cbc55ae8229257747aa481cf5eb4e9a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

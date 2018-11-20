@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 114764278932636412}
   - component: {fileID: 95823133672907440}
   - component: {fileID: 114796705441547182}
+  - component: {fileID: 114679775849070426}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -198,6 +199,28 @@ MonoBehaviour:
   gun: {fileID: 1335753990365048}
   spritePlayer: {fileID: 212459655691492214}
   bulletSpawnPoint: {fileID: 1753658549884908}
+--- !u!114 &114679775849070426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1850236748684174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55bfbbecc59e27a4ea708c0c9882910e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  onDie:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OnDamagedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114764278932636412
 MonoBehaviour:
   m_ObjectHideFlags: 1

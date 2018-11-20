@@ -1,10 +1,7 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Josie/Documents/GitHub/Top-Down-Shooter/Uni Game/Uni Game.exe
+C:/Users/jwood20/Documents/bigbig/bigbig.exe
 SceneListBegin?
-Assets/Scenes/Game.unity
-Assets/Scenes/Game Over.unity
-Assets/Scenes/Main Menu.unity
 Assets/Scenes/Demo or Die Build/Level One.unity
 SceneListEnd?
 800a207439261dc140d6714017b8b21a Assembly-CSharp.dll:.Bullet
