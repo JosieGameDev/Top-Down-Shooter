@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 763}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 723, y: 713}
   m_MaxSize: {x: 14004, y: 18063}
   vertical: 0
-  controlID: 44
+  controlID: 90
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 446, y: 713}
   m_MaxSize: {x: 10002, y: 18063}
   vertical: 1
-  controlID: 45
+  controlID: 91
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 446, y: 442}
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 0
-  controlID: 46
+  controlID: 92
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_MinSize: {x: 242, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 141
+  controlID: 64
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -305,8 +305,8 @@ MonoBehaviour:
     y: 0
     width: 277
     height: 731
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
@@ -341,7 +341,7 @@ MonoBehaviour:
     m_CachedPref: -50
     m_ControlHash: 510661707
     m_PrefName: Preview_TilemapBrushInspector
-  m_Palette: {fileID: 1360036428562412, guid: 9510aa456b472c2409d5731785799960, type: 2}
+  m_Palette: {fileID: 1148341183961436, guid: 776739d2b6a36134bbfdbb1d3dbe5135, type: 2}
   m_Target: {fileID: 0}
 --- !u!114 &15
 MonoBehaviour:
@@ -380,20 +380,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 88
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs
   m_LastFoldersGridSize: 88
   m_LastProjectPath: C:\Users\Josie\Documents\GitHub\Top-Down-Shooter\Uni Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5a090000
-    m_LastClickedID: 2394
-    m_ExpandedIDs: 0000000002090000c40a000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 27}
+    m_SelectedIDs: b4090000
+    m_LastClickedID: 2484
+    m_ExpandedIDs: 00000000fc08000054090000be0a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -421,7 +421,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000002090000c40a0000
+    m_ExpandedIDs: 00000000fc080000be0a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -449,7 +449,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300002e2c00004e2c0000422c0000f8290000222b0000382e0000582e0000602e00005c2e000000000000e20b0000b80a0000980b0000
+    m_ExpandedInstanceIDs: c62300002e2c00004e2c0000422c0000f8290000222b0000382e0000582e0000602e00005c2e0000e20b0000b80a0000980b000000000000ee0a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -502,10 +502,10 @@ MonoBehaviour:
     height: 218
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 002f0000
-    m_LastClickedID: 12032
-    m_ExpandedIDs: 2cd9ffffeafbffff00000000002f0000
+    scrollPos: {x: 0, y: 71}
+    m_SelectedIDs: 8e4c0000
+    m_LastClickedID: 19598
+    m_ExpandedIDs: 6423f9ff4c26f9ff7626f9ff8026f9ffd4f2faffe643fbff4256fbff4a56fbff80edfcfffef3fcffc8f4fcff48f6fcff50f6fcff58f6fcff70f6fcff424cfefff852feff3689feff82a9feffa8adfeff96affeffb2b7feff80b8feff10bafeff14bafeff18bafeff1cbafeffaeedfeff5ef5feff1cfbfeff261dffff887dffff50f1ffffa6f5fffff0fbffff00000000362f0000402f0000d4300000de300000b0340000ba34000012360000343a000076400000504c0000864c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -524,7 +524,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
   m_ExpandedScenes:
-  - Zombie Shooter Level 1
+  - Level One
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -557,7 +557,7 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1262242
+  m_LastSelectedObjectID: 13832
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -584,14 +584,14 @@ MonoBehaviour:
     height: 439
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 17499.160735314297
+  lastFramingTime: 7408.450363810195
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.3833194, y: -0.19689201, z: 0.09375}
+    m_Target: {x: 17.25311, y: -4.340465, z: 11.78125}
     speed: 2
-    m_Value: {x: 4.3833194, y: -0.19689201, z: 0.09375}
+    m_Value: {x: 17.25311, y: -4.340465, z: 11.78125}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -615,17 +615,17 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     zGrid:
-      m_Target: 1
+      m_Target: 0
       speed: 2
-      m_Value: 1
+      m_Value: 0
   m_Rotation:
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 12.333414
+    m_Target: 21.055447
     speed: 2
-    m_Value: 12.333414
+    m_Value: 21.055447
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -663,7 +663,7 @@ MonoBehaviour:
     height: 439
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_Stats: 0
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0

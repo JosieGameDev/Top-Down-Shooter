@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1948869061984594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3318051, y: -0.47536945, z: 0}
+  m_LocalPosition: {x: -3.7339556, y: -1.4896249, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fde17404334383458bdd79188917484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1000
+  moveSpeed: 400
   damage: 1
 --- !u!212 &212835185345894968
 SpriteRenderer:
@@ -110,7 +110,7 @@ SpriteRenderer:
   m_SortingLayerID: 761379171
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c4c195d923354b440989fa235386f185, type: 3}
+  m_Sprite: {fileID: 21300006, guid: b79198c784e45d04e9b90cc8b9f38aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

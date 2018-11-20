@@ -65,10 +65,12 @@
     <Compile Include="Assets\Scripts\DestroyOnDie.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyShooting.cs" />
+    <Compile Include="Assets\Scripts\GameManager1.cs" />
     <Compile Include="Assets\Scripts\HealthSystem1.cs" />
     <Compile Include="Assets\Scripts\MouseSmoothLook2D.cs" />
     <Compile Include="Assets\Scripts\MoveTowardsObject.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\RestartLevelOnDie.cs" />
     <Compile Include="Assets\Scripts\ShootyEnemyTest.cs" />
     <Compile Include="Assets\Scripts\SmoothFollow2D.cs" />
     <Compile Include="Assets\Scripts\SmoothLookAtTarget.cs" />
