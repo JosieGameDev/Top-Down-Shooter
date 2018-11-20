@@ -37,7 +37,10 @@ public class Enemy : MonoBehaviour {
             RobotSprite.flipX = false;
         }
 
+        //
 
+        Debug.Log(robot.transform.position.x);
+        Debug.Log(player.transform.position.x);
         //Debug.Log(Robot.velocity);
 
 
