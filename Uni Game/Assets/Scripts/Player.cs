@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Collections;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -26,4 +28,11 @@ public class Player : MonoBehaviour {
         }
 
 	}
+
+    public void onDie()
+    {
+        SceneManager.LoadScene("Zombie Shooter Level 1", LoadSceneMode.Additive);
+    }
+
+    
 }
