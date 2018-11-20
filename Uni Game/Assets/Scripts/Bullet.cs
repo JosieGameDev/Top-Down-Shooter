@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour {
 
     public float moveSpeed = 100.0f;
     public int damage = 1;
+    public bool enemy;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +20,17 @@ public class Bullet : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        other.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
+        if(other.transform.tag == "Player" && enemy)
+        {
+            other.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
+            Destroy(gameObject);
+        }
+        else if (other.transform.tag == "Enemy" && !enemy)
+        {
+            other.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
+            Destroy(gameObject);
+        }
+        
 
     }
 

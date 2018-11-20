@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\EnemyShooting.cs" />
     <Compile Include="Assets\Scripts\GameManager1.cs" />
     <Compile Include="Assets\Scripts\HealthSystem1.cs" />
+    <Compile Include="Assets\Scripts\HurtTrigger.cs" />
     <Compile Include="Assets\Scripts\MouseSmoothLook2D.cs" />
     <Compile Include="Assets\Scripts\MoveTowardsObject.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
