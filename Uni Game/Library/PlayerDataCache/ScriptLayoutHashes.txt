@@ -1,10 +1,10 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/jwood20/Documents/bigbig/bigbig.exe
+C:/Users/Josie/Documents/GitHub/Top-Down-Shooter/Builds/prototype Build/prototype Build.exe
 SceneListBegin?
 Assets/Scenes/Demo or Die Build/Level One.unity
 SceneListEnd?
-800a207439261dc140d6714017b8b21a Assembly-CSharp.dll:.Bullet
+f2c7b1e44b680a99f458a620be7ee100 Assembly-CSharp.dll:.Bullet
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 cf455f7a806648c6ed4c7d3e3f8a0e03 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 13bdb7c23815c33a33b37b0ba8dd39be UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -49,6 +49,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RestartLevelOnDie
 0b1f547d6e7e2006637a1c788492a414 Assembly-CSharp.dll:.EnemyShooting
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -120,6 +121,8 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 1ee47048d700dd00b56f643026953707 Assembly-CSharp.dll:.MoveTowardsObject
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameManager1
+c4804b4e9707ab1046803d0eec61f510 Assembly-CSharp.dll:.HurtTrigger
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.TopDownCharacterController2D
 82edcb23f08a0c5d6f1eef3c169a327f Assembly-CSharp.dll:.Weapon
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -160,5 +163,3 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 532e16f90c7377fa30823d2dd7528d34 Assembly-CSharp.dll:.Enemy
 fbf8127e0fa5a72eeee5110533cd1b52 Assembly-CSharp.dll:.HealthSystem1
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Player
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameManager1
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RestartLevelOnDie
