@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Demo or Die Build/Level One.unity
+- path: Assets/Scenes/Demo or Die Build/Tutorial.unity
   isLoaded: 1
   isActive: 1

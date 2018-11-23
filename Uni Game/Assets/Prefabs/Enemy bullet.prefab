@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fde17404334383458bdd79188917484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 400
+  moveSpeed: 500
   damage: 1
   enemy: 1
 --- !u!212 &212835185345894968

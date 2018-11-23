@@ -70,7 +70,9 @@
     <Compile Include="Assets\Scripts\HurtTrigger.cs" />
     <Compile Include="Assets\Scripts\MouseSmoothLook2D.cs" />
     <Compile Include="Assets\Scripts\MoveTowardsObject.cs" />
+    <Compile Include="Assets\Scripts\NextLevel.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\PlayerDamage.cs" />
     <Compile Include="Assets\Scripts\RestartLevelOnDie.cs" />
     <Compile Include="Assets\Scripts\ShootyEnemyTest.cs" />
     <Compile Include="Assets\Scripts\SmoothFollow2D.cs" />

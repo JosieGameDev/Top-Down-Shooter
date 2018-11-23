@@ -17,7 +17,7 @@ public class GameManager1 : MonoBehaviour {
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Level One");
     }
 
     public void endGame()
@@ -28,5 +28,14 @@ public class GameManager1 : MonoBehaviour {
     public void BackToMainMenu()
     {
         SceneManager.LoadScene("Main Menu");
+    }
+
+    public void StartTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+    public void EndTutorial()
+    {
+        SceneManager.LoadScene("Tutorial endScreen");
     }
 }

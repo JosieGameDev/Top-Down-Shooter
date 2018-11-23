@@ -39,8 +39,8 @@ public class Enemy : MonoBehaviour {
 
         //
 
-        Debug.Log(robot.transform.position.x);
-        Debug.Log(player.transform.position.x);
+        //Debug.Log(robot.transform.position.x);
+        //Debug.Log(player.transform.position.x);
         //Debug.Log(Robot.velocity);
 
 
