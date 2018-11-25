@@ -28,6 +28,8 @@ GameObject:
   - component: {fileID: 114356335884094434}
   - component: {fileID: 95642861654481436}
   - component: {fileID: 50884121103950488}
+  - component: {fileID: 114876880280606230}
+  - component: {fileID: 58286882585841958}
   m_Layer: 9
   m_Name: Robot1
   m_TagString: Enemy
@@ -42,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1454751987384060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.477719, y: -7.9753094, z: 0}
+  m_LocalPosition: {x: 9.461215, y: -18.94015, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,12 +79,27 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.39
+--- !u!58 &58286882585841958
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1454751987384060}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!95 &95642861654481436
 Animator:
   serializedVersion: 3
@@ -140,7 +157,7 @@ MonoBehaviour:
     m_TypeName: EnemySpawnedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   RobotSprite: {fileID: 212020856667741124}
-  player: {fileID: 1850236748684174, guid: 156ab4945e5e4da4eaf8d1265f08530b, type: 2}
+  player: {fileID: 0}
   robot: {fileID: 1454751987384060}
 --- !u!114 &114075352726547322
 MonoBehaviour:
@@ -164,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55bfbbecc59e27a4ea708c0c9882910e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 4
   onDie:
     m_PersistentCalls:
       m_Calls:
@@ -186,6 +203,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: OnDamagedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  hearts6: {fileID: 0}
+  hearts5: {fileID: 0}
+  hearts4: {fileID: 0}
+  hearts3: {fileID: 0}
+  hearts2: {fileID: 0}
+  hearts1: {fileID: 0}
 --- !u!114 &114356335884094434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -213,6 +236,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 0.3
+--- !u!114 &114876880280606230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1454751987384060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1861668c29bd234ba82df932dafbb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  resetTime: 6
 --- !u!212 &212020856667741124
 SpriteRenderer:
   m_ObjectHideFlags: 1

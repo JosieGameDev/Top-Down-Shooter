@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GameObject player = GameObject.FindWithTag("Player");
+        //GameObject player = GameObject.FindWithTag("Player");
         onSpawn.Invoke(player.transform);
         RobotSprite.flipX = false;
 	}

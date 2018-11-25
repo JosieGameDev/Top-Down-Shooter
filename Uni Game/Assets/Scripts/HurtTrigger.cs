@@ -49,21 +49,34 @@ public class HurtTrigger : MonoBehaviour
          * Just like the Bullet, we send the damage to the other GameObject (collision)
          * if the other GameObject has a TakeDamage method, it will run that method
          */ 
-        collision.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
+
+        if (collision.gameObject.tag == "Player")
+        {
+
+            Debug.Log("colliding w player");
+            collision.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
 
         /*
          * DISABLE THE COLLIDER
          * here we disable our collider for a short time
          * when it is enabled again, it will apply damage again!
          */ 
-        GetComponent<Collider2D>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
 
         /*
          * ADD A TIMER TO RESET THE COLLIDER AFTER A SHORT TIME
          * here we use Invoke to reset our collider after a short time (resetTime)
          * this will set up our OnTriggerEnter method to run again
          */
-        Invoke("ResetTrigger", resetTime);
+            Invoke("ResetTrigger", resetTime);
+
+        }
+        else
+        {
+            //debugging to check colliders worked
+            //Debug.Log("other collision");
+        }
+       
     }
 
 

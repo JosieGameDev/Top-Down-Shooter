@@ -152,7 +152,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1948869061984594, guid: 5babaaef7e91f5b4cb169893021a68d2,
     type: 2}
   bulletSpawn: {fileID: 4209497582812690}
-  playerTransform: {fileID: 0}
   raange: 10
   nextFire: 0
   fireRate: 0.5
@@ -192,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55bfbbecc59e27a4ea708c0c9882910e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 5
   onDie:
     m_PersistentCalls:
       m_Calls:
@@ -214,6 +213,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: OnDamagedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  hearts6: {fileID: 0}
+  hearts5: {fileID: 0}
+  hearts4: {fileID: 0}
+  hearts3: {fileID: 0}
+  hearts2: {fileID: 0}
+  hearts1: {fileID: 0}
 --- !u!212 &212701602396278810
 SpriteRenderer:
   m_ObjectHideFlags: 1

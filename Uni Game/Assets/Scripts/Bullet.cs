@@ -30,6 +30,10 @@ public class Bullet : MonoBehaviour {
             other.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
             Destroy(gameObject);
         }
+        else if (other.transform.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
         
 
     }

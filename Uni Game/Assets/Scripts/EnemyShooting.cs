@@ -7,7 +7,9 @@ public class EnemyShooting : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
-    public Transform playerTransform;
+    //public Transform playerTransform;
+    Transform playerTransform;
+    GameObject player;
     float distance;
     public int raange = 15;
     public float nextFire = 0;
@@ -18,12 +20,14 @@ public class EnemyShooting : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        player = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        playerTransform = player.transform;
         //get distance
         distance = Vector3.Distance(bulletSpawn.position, playerTransform.position);
         //check if in range
