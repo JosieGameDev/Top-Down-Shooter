@@ -18,15 +18,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Demo or Die Build/Main Menu.unity
     guid: 8aa415c059633a64d90af8360d8ff94b
   - enabled: 1
-    path: Assets/Scenes/Demo or Die Build/Tutorial.unity
+    path: Assets/Scenes/Demo or Die Build/Level One.unity
     guid: 3a6c4d815fd20a74a9cc11f1c4abf637
   - enabled: 1
     path: Assets/Scenes/Demo or Die Build/Tutorial endScreen.unity
     guid: 007d3198076654d44a8c80fdd5d3bf21
   - enabled: 1
-    path: Assets/Scenes/Demo or Die Build/Level One.unity
+    path: Assets/Scenes/Demo or Die Build/Level Two.unity
     guid: 837bab070f1763c41b64c084c5bd31ba
   - enabled: 1
     path: Assets/Scenes/Demo or Die Build/Opening Screen.unity
     guid: fdb2faca4952c8a4391c153c34c31942
+  - enabled: 1
+    path: Assets/Scenes/Demo or Die Build/Tutorial.unity
+    guid: 33403520583286240a8523f1380f9044
   m_configObjects: {}

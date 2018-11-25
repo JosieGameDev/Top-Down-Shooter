@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 212802490508646140}
   - component: {fileID: 114638623056892508}
   - component: {fileID: 50446340575253060}
+  - component: {fileID: 95058962027501618}
+  - component: {fileID: 114898600120776870}
   m_Layer: 13
   m_Name: GUN
   m_TagString: Untagged
@@ -40,7 +42,7 @@ GameObject:
   m_Layer: 13
   m_Name: BulletSpawn
   m_TagString: Untagged
-  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -63,6 +65,7 @@ GameObject:
   - component: {fileID: 114318361110182818}
   - component: {fileID: 114341452867649694}
   - component: {fileID: 58086818054304296}
+  - component: {fileID: 58744133243854786}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -166,6 +169,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!58 &58744133243854786
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1850236748684174}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!58 &58950975837549772
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -181,6 +199,24 @@ CircleCollider2D:
   m_Offset: {x: 0.09, y: -0.08}
   serializedVersion: 2
   m_Radius: 0.45
+--- !u!95 &95058962027501618
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1335753990365048}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 82cfbb264ea25a64fb4587091ff672cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95823133672907440
 Animator:
   serializedVersion: 3
@@ -324,6 +360,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caca7b9fb4a2e4c4c8cbb079ec577cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114898600120776870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1335753990365048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f074684d2af4a9644911787affb61b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212459655691492214

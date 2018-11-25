@@ -15,12 +15,16 @@ public class EnemyShooting : MonoBehaviour
     public float nextFire = 0;
     public float fireRate = 0.5f;
 
+    //setting up animations
+    Animator gunAnim;
+
     //Vector2 speed = new Vector2(10f, 10f);
 
     // Use this for initialization
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        gunAnim = GetComponent<Animator>();
         
     }
 
@@ -38,6 +42,11 @@ public class EnemyShooting : MonoBehaviour
             {
                 nextFire = Time.time + fireRate;
                 Fire();
+                gunAnim.SetBool("EnemyShooting", true);
+            }
+            else
+            {
+                gunAnim.SetBool("EnemyShooting", false);
             }
 
             //if(Input.GetKeyDown(KeyCode.Space))
@@ -47,6 +56,10 @@ public class EnemyShooting : MonoBehaviour
 
 
 
+        }
+        else
+        {
+            gunAnim.SetBool("EnemyShooting", false);
         }
 
 

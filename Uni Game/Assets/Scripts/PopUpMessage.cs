@@ -23,6 +23,15 @@ public class PopUpMessage : MonoBehaviour {
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Registering collision");
+            TurnOnMessage();
+        }
+    }
+
     //public void OnCollisionExit2D(Collision2D collision)
     //{
     //    if (collision.gameObject.tag == "Player")
@@ -30,7 +39,7 @@ public class PopUpMessage : MonoBehaviour {
     //        TurnOffMessage();
     //        Debug.Log("Registers leaving ");
     //    }
-        
+
     //}
 
     public void TurnOnMessage()
