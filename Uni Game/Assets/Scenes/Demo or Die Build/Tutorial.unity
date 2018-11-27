@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 979568258}
   m_Layer: 11
   m_Name: wallsTilemap
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2545,6 +2545,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224061724897141046, guid: b16ecb5d051de5849a4c8b71953f3ff1,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -27.599976
+      objectReference: {fileID: 0}
+    - target: {fileID: 224342290265901222, guid: b16ecb5d051de5849a4c8b71953f3ff1,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -108
+      objectReference: {fileID: 0}
+    - target: {fileID: 224342290265901222, guid: b16ecb5d051de5849a4c8b71953f3ff1,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -36
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b16ecb5d051de5849a4c8b71953f3ff1, type: 2}
   m_IsPrefabParent: 0
@@ -2910,6 +2925,10 @@ Prefab:
     - target: {fileID: 1363459509391560, guid: 2a7798fa2adfcba49af3f789bd5ac9b8, type: 2}
       propertyPath: m_Name
       value: Broken Robot (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1363459509391560, guid: 2a7798fa2adfcba49af3f789bd5ac9b8, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a7798fa2adfcba49af3f789bd5ac9b8, type: 2}

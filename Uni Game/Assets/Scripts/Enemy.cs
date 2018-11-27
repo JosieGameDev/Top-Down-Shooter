@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //GameObject player = GameObject.FindWithTag("Player");
+        GameObject player = GameObject.FindWithTag("Player");
         onSpawn.Invoke(player.transform);
         RobotSprite.flipX = false;
 	}
@@ -27,16 +27,17 @@ public class Enemy : MonoBehaviour {
 	void Update () {
         //flip enemy based on direction of travel
 
-
-        if (player.transform.position.x < robot.transform.position.x)
+        if (player != null)
         {
-            RobotSprite.flipX = true;
+            if (player.transform.position.x < robot.transform.position.x)
+            {
+                RobotSprite.flipX = true;
+            }
+            else if (player.transform.position.x >= robot.transform.position.x)
+            {
+                RobotSprite.flipX = false;
+            }
         }
-        else if (player.transform.position.x >= robot.transform.position.x)
-        {
-            RobotSprite.flipX = false;
-        }
-
         //
 
         //Debug.Log(robot.transform.position.x);

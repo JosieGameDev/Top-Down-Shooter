@@ -18,6 +18,7 @@ public class HealthSystem1 : MonoBehaviour {
     public Image hearts3;
     public Image hearts2;
     public Image hearts1;
+    public bool isPlayer = false;
 
 
 
@@ -29,30 +30,55 @@ public class HealthSystem1 : MonoBehaviour {
 
         onDamaged.Invoke(health);
 
-        
-        //changing hearts visible based on health
-        if (health == 5)
+        if (isPlayer == true)
         {
-            Destroy(hearts6);
-        }
-        else if (health == 4)
-        {
-            Destroy(hearts5);
-        }
-        else if (health == 3)
-        {
-            Destroy(hearts4);
-        }
-        else if (health == 2)
-        {
-            Destroy(hearts3);
-        }
-        else if (health == 1)
-        {
-            Destroy(hearts2);
-        }
+            //changing hearts visible based on health
+            if (health <= 5)
+            {
+                hearts6.enabled = false;
+            }
+            else
+            {
+                hearts6.enabled = true;
+            }
 
-        
+            if (health <= 4)
+            {
+                hearts5.enabled = false;
+            }
+            else
+            {
+                hearts5.enabled = true;
+            }
+
+            if (health <= 3)
+            {
+                hearts4.enabled = false;
+            }
+            else
+            {
+                hearts4.enabled = true;
+            }
+
+            if (health <= 2)
+            {
+                hearts3.enabled = false;
+            }
+            else
+            {
+                hearts2.enabled = true;
+            }
+
+            if (health <= 1)
+            {
+                hearts2.enabled = false;
+            }
+            else
+            {
+                hearts2.enabled = true;
+            }
+
+        }
 
         if (health < 1)
         {

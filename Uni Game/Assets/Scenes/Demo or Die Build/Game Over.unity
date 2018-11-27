@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 136274045}
   - component: {fileID: 136274044}
   - component: {fileID: 136274043}
+  - component: {fileID: 136274046}
   m_Layer: 5
   m_Name: ExitToMenu
   m_TagString: Untagged
@@ -235,6 +236,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 136274041}
+--- !u!114 &136274046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136274041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b7a6a7aa5bafa40a8c93190acbe9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleSize: 1.5
 --- !u!1 &1003052784
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +448,7 @@ GameObject:
   - component: {fileID: 1091947973}
   - component: {fileID: 1091947972}
   - component: {fileID: 1091947971}
+  - component: {fileID: 1091947974}
   m_Layer: 5
   m_Name: Retry
   m_TagString: Untagged
@@ -546,6 +560,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1091947969}
+--- !u!114 &1091947974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1091947969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b7a6a7aa5bafa40a8c93190acbe9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleSize: 1.5
 --- !u!1 &1155964495
 GameObject:
   m_ObjectHideFlags: 0

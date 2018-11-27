@@ -10,6 +10,9 @@ public class MoveTowardsObject : MonoBehaviour {
     Transform currentPos;
     float distance;
     public float range;
+    public bool staysAtRange = false;
+    public float rangedDistance = 2f;
+    public Transform moveTo;
 
 
 	// Use this for initialization
@@ -17,20 +20,36 @@ public class MoveTowardsObject : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag("Player");
         transform = player.transform;
         currentPos = GetComponent<Transform>();
+        
 
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        distance = Vector3.Distance(currentPos.position, transform.position);
-
+        
         if (player != null)
         {
+            distance = Vector3.Distance(currentPos.position, transform.position);
+
             if (distance <= range)
             {
-                currentPos.position = Vector3.MoveTowards(currentPos.position, transform.position, speed * 0.1f);
-            }//
+                if (staysAtRange == false)
+                {
+                    currentPos.position = Vector3.MoveTowards(currentPos.position, transform.position, speed * 0.1f);
+                }
+                else if (staysAtRange == true)
+                {
+                    if (distance > rangedDistance)
+                    {
+                        currentPos.position = Vector3.MoveTowards(currentPos.position, transform.position, speed * 0.1f);
+                    }
+                    else //if (distance <= rangedDistance)
+                    {
+                        currentPos.position = Vector3.MoveTowards(currentPos.position, moveTo.position, speed * 0.1f);
+                    }
+                }
+            }
             
         }
 	}

@@ -31,37 +31,40 @@ public class EnemyShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerTransform = player.transform;
-        //get distance
-        distance = Vector3.Distance(bulletSpawn.position, playerTransform.position);
-        //check if in range
-        if (distance < raange)
-        {
 
-            if (Time.time > nextFire)
+        if (player != null)
+        {
+            playerTransform = player.transform;
+            //get distance
+            distance = Vector3.Distance(bulletSpawn.position, playerTransform.position);
+            //check if in range
+            if (distance < raange)
             {
-                nextFire = Time.time + fireRate;
-                Fire();
-                gunAnim.SetBool("EnemyShooting", true);
+
+                if (Time.time > nextFire)
+                {
+                    nextFire = Time.time + fireRate;
+                    Fire();
+                    gunAnim.SetBool("EnemyShooting", true);
+                }
+                else
+                {
+                    gunAnim.SetBool("EnemyShooting", false);
+                }
+
+                //if(Input.GetKeyDown(KeyCode.Space))
+                //{
+                //    Fire();
+                //}
+
+
+
             }
             else
             {
                 gunAnim.SetBool("EnemyShooting", false);
             }
-
-            //if(Input.GetKeyDown(KeyCode.Space))
-            //{
-            //    Fire();
-            //}
-
-
-
         }
-        else
-        {
-            gunAnim.SetBool("EnemyShooting", false);
-        }
-
 
         //void Fire()
         //{
