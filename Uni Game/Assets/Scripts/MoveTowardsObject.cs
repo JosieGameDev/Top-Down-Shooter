@@ -13,6 +13,8 @@ public class MoveTowardsObject : MonoBehaviour {
     public bool staysAtRange = false;
     public float rangedDistance = 2f;
     public Transform moveTo;
+    Animator walkAnim;
+    public bool isWalking;
 
 
 	// Use this for initialization
@@ -20,6 +22,8 @@ public class MoveTowardsObject : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag("Player");
         transform = player.transform;
         currentPos = GetComponent<Transform>();
+        walkAnim = GetComponent<Animator>();
+        isWalking = false;
         
 
     }
@@ -31,9 +35,11 @@ public class MoveTowardsObject : MonoBehaviour {
         if (player != null)
         {
             distance = Vector3.Distance(currentPos.position, transform.position);
+            walkAnim.SetBool("isWalking", false);
 
             if (distance <= range)
             {
+                walkAnim.SetBool("isWalking", true);
                 if (staysAtRange == false)
                 {
                     currentPos.position = Vector3.MoveTowards(currentPos.position, transform.position, speed * 0.1f);
