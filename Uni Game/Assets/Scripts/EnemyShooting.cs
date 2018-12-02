@@ -17,6 +17,7 @@ public class EnemyShooting : MonoBehaviour
 
     //setting up animations
     Animator gunAnim;
+    
 
     //Vector2 speed = new Vector2(10f, 10f);
 

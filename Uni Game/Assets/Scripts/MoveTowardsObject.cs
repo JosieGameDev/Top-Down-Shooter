@@ -46,8 +46,14 @@ public class MoveTowardsObject : MonoBehaviour {
                 }
                 else if (staysAtRange == true)
                 {
-                    if (distance > rangedDistance)
+                    if (distance >= rangedDistance)
                     {
+                        if (distance < rangedDistance + 0.5f)
+                        {
+                            currentPos.position = currentPos.position;
+                            walkAnim.SetBool("isWalking", false);
+                        }
+                        else
                         currentPos.position = Vector3.MoveTowards(currentPos.position, transform.position, speed * 0.1f);
                     }
                     else //if (distance <= rangedDistance)
