@@ -30,6 +30,10 @@ public class HealthSystem1 : MonoBehaviour {
 
         onDamaged.Invoke(health);
 
+        //disable circle collider
+        //GetComponent<CircleCollider2D>().enabled = false;
+        //Invoke("enableCollider", 3);
+
         if (isPlayer == true)
         {
             //changing hearts visible based on health
@@ -85,6 +89,11 @@ public class HealthSystem1 : MonoBehaviour {
             Destroy(hearts1);
             onDie.Invoke();
         }
+    }
+
+    void enableCollider()
+    {
+        GetComponent<CircleCollider2D>().enabled = true;
     }
 
 	// Use this for initialization
