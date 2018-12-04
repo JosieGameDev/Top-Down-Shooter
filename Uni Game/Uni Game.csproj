@@ -303,7 +303,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\burstBullets.cs" />
     <Compile Include="Assets\Scripts\Buttons.cs" />
+    <Compile Include="Assets\Scripts\DamageTrailDop.cs" />
     <Compile Include="Assets\Scripts\DestroyOnDie.cs" />
     <Compile Include="Assets\Scripts\Doors.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
@@ -312,6 +314,7 @@
     <Compile Include="Assets\Scripts\Gun.cs" />
     <Compile Include="Assets\Scripts\HealthSystem1.cs" />
     <Compile Include="Assets\Scripts\HurtTrigger.cs" />
+    <Compile Include="Assets\Scripts\Lifetime.cs" />
     <Compile Include="Assets\Scripts\MouseSmoothLook2D.cs" />
     <Compile Include="Assets\Scripts\MoveTowardsObject.cs" />
     <Compile Include="Assets\Scripts\NextLevel.cs" />
