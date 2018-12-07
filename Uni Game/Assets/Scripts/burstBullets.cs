@@ -22,15 +22,20 @@ public class burstBullets : MonoBehaviour {
     public Transform spwn16;
 
     public float nextFire = 0;
+	public float countdown = 0.5f;
     public float fireRate = 0.5f;
     //public GameObject player;
 
     public GameObject enemyBullet;
+	Animator burstAnim;
+	public bool isInCountdown = false;
+	public bool isShooting = false;
 
 	// Use this for initialization
 	void Start ()
     {
-        //player = GameObject.FindGameObjectWithTag("Player");
+		//player = GameObject.FindGameObjectWithTag("Player");
+		burstAnim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -40,13 +45,27 @@ public class burstBullets : MonoBehaviour {
         {
             nextFire = Time.time + fireRate;
             Fire();
-            //gunAnim.SetBool("EnemyShooting", true);
-        }
+			//burstAnim.SetBool("isInCountdown", false);
+			burstAnim.SetBool("isShooting", true);
+			//gunAnim.SetBool("EnemyShooting", true);
+			Invoke( "resetShooting", 0.1f);
+		}
         else
         {
+			//if (Time.time - countdown > nextFire)
+			//{
+			//	burstAnim.SetBool("isInCountdown", true);
+			//}
             //gunAnim.SetBool("EnemyShooting", false);
         }
+
+
     }
+
+	public void resetShooting()
+	{
+		burstAnim.SetBool("isShooting", false);
+	}
 
     void Fire()
     {

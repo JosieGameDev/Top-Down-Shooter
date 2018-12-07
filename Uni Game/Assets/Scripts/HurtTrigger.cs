@@ -36,7 +36,7 @@ public class HurtTrigger : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             //debuggint to check collider
-            Debug.Log("colliding w player");
+            //Debug.Log("colliding w player");
             collision.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
 
         

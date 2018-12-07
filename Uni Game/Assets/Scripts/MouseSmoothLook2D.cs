@@ -55,14 +55,14 @@ public class MouseSmoothLook2D : MonoBehaviour {
             //flip image in these conditions
             spriteGun.flipY = true;
             spritePlayer.flipX = true;
-            spriteGun.transform.localPosition = new Vector3(-0.2f, -0.18f, 0);
+            spriteGun.transform.localPosition = new Vector3(0f, 0f, 0);
             bulletSpawnPoint.transform.localPosition = new Vector3(0.4f, -0.1f, 0);
         }
         else
         {
             spriteGun.flipY = false;
             spritePlayer.flipX = false;
-            spriteGun.transform.localPosition = new Vector3(0.2f, -0.18f, 0);
+            spriteGun.transform.localPosition = new Vector3(0f, -0f, 0);
             bulletSpawnPoint.transform.localPosition = new Vector3(0.4f, 0.1f, 0);
         }
     }

@@ -22,7 +22,7 @@ GameObject:
   m_Layer: 0
   m_Name: spwn1
   m_TagString: Untagged
-  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 4383704639261912}
   - component: {fileID: 212948433857517514}
   - component: {fileID: 114702722608362186}
+  - component: {fileID: 95683917916465950}
   m_Layer: 0
   m_Name: burst bullet boi
   m_TagString: Untagged
@@ -505,6 +506,24 @@ Transform:
   m_Father: {fileID: 4383704639261912}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0.717, y: 0.165, z: 45}
+--- !u!95 &95683917916465950
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481714241054516}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7b32f6acc3f8032409f054aa8f498adf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114702722608362186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -533,9 +552,12 @@ MonoBehaviour:
   spwn15: {fileID: 4452414779037982}
   spwn16: {fileID: 4805613447754858}
   nextFire: 0
-  fireRate: 0.5
-  enemyBullet: {fileID: 1948869061984594, guid: 5babaaef7e91f5b4cb169893021a68d2,
+  countdown: 0.5
+  fireRate: 2
+  enemyBullet: {fileID: 1928388247340962, guid: cb0f059fe37d40449ae2677f6f2dc5b1,
     type: 2}
+  isInCountdown: 0
+  isShooting: 0
 --- !u!212 &212948433857517514
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -571,7 +593,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: b539714e807d1ae4f943ce691f18c876, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 533d3fb47cfdbc24f8c4f485e63d23e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

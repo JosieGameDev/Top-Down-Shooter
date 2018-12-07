@@ -156,7 +156,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.32
 --- !u!1 &44627954
 GameObject:
   m_ObjectHideFlags: 0
@@ -3038,6 +3038,16 @@ Prefab:
       propertyPath: theCamera
       value: 
       objectReference: {fileID: 417660503}
+    - target: {fileID: 114679775849070426, guid: 156ab4945e5e4da4eaf8d1265f08530b,
+        type: 2}
+      propertyPath: health
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114679775849070426, guid: 156ab4945e5e4da4eaf8d1265f08530b,
+        type: 2}
+      propertyPath: isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 58461716390821746, guid: 156ab4945e5e4da4eaf8d1265f08530b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 156ab4945e5e4da4eaf8d1265f08530b, type: 2}
