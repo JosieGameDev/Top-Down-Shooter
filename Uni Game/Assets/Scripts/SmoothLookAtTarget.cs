@@ -62,6 +62,12 @@ public class SmoothLookAtTarget : MonoBehaviour
     public float adjustmentAngle = 0.0f;
 
 
+    private void Start()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        target = player.transform;
+    }
+
     /*
      * Update
      * this method is provided by Monobehaviour that runs CONSTANTLY (30-60 times per second) while this GameObject is active

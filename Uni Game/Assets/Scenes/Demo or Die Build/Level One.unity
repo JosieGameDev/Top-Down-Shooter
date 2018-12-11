@@ -60547,8 +60547,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 4009531823983650, guid: 156ab4945e5e4da4eaf8d1265f08530b,
-        type: 2}
+      objectReference: {fileID: 1914032901}
     - target: {fileID: 114115980324919000, guid: abfe2827886e10540bd335b6390c3779,
         type: 2}
       propertyPath: playerTransform
@@ -61434,8 +61433,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 4009531823983650, guid: 156ab4945e5e4da4eaf8d1265f08530b,
-        type: 2}
+      objectReference: {fileID: 1914032901}
     - target: {fileID: 114115980324919000, guid: abfe2827886e10540bd335b6390c3779,
         type: 2}
       propertyPath: playerTransform
