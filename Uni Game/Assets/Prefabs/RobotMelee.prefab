@@ -26,11 +26,11 @@ GameObject:
   - component: {fileID: 114075352726547322}
   - component: {fileID: 114035714720259886}
   - component: {fileID: 114356335884094434}
-  - component: {fileID: 95642861654481436}
   - component: {fileID: 50884121103950488}
   - component: {fileID: 58286882585841958}
+  - component: {fileID: 95595235094126116}
   m_Layer: 9
-  m_Name: Robot1
+  m_Name: RobotMelee
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1454751987384060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.64, y: -0.8, z: 0}
+  m_LocalPosition: {x: 9.656668, y: -23.98836, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4860564261120702}
@@ -145,7 +145,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.03
---- !u!95 &95642861654481436
+--- !u!95 &95595235094126116
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -157,7 +157,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: dfceb2149e576ed4fba4ce658f3c85ff, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -286,6 +286,7 @@ MonoBehaviour:
   staysAtRange: 0
   rangedDistance: 2
   moveTo: {fileID: 0}
+  isWalking: 0
 --- !u!114 &114738176049684650
 MonoBehaviour:
   m_ObjectHideFlags: 1

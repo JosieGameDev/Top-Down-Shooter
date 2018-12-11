@@ -2819,14 +2819,14 @@ Prefab:
       propertyPath: hearts1
       value: 
       objectReference: {fileID: 1070530512}
+    - target: {fileID: 58461716390821746, guid: 156ab4945e5e4da4eaf8d1265f08530b,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 156ab4945e5e4da4eaf8d1265f08530b, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1181272776 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1850236748684174, guid: 156ab4945e5e4da4eaf8d1265f08530b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1181272775}
 --- !u!4 &1181272787 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4009531823983650, guid: 156ab4945e5e4da4eaf8d1265f08530b,
@@ -18189,11 +18189,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114035714720259886, guid: f250f0cbb1f48434dab82c90ef422aef,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1181272776}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f250f0cbb1f48434dab82c90ef422aef, type: 2}
   m_IsPrefabParent: 0
