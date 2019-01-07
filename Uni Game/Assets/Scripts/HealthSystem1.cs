@@ -19,6 +19,12 @@ public class HealthSystem1 : MonoBehaviour {
     public Image hearts2;
     public Image hearts1;
     public bool isPlayer = false;
+    public bool playerIsResistant = false;
+
+    //public bool hurtAnim = false;
+
+    public float playerBuffTime = 0.5f;
+    public Animator playerAnim;
 
 
 
@@ -26,9 +32,30 @@ public class HealthSystem1 : MonoBehaviour {
 
     public void TakeDamage (int damage)
     {
-        health -= damage;
+        //health -= damage;
 
-        onDamaged.Invoke(health);
+        if (isPlayer == true && playerIsResistant != true)
+        {
+            onDamaged.Invoke(health);
+            playerIsResistant = true;
+            Invoke("resentResiliant", playerBuffTime);
+            health -= damage;
+
+
+            //set up the anim
+            //hurtAnim = true;
+            playerAnim.SetBool("hurtAnim", true);
+            Invoke("disabaleHurtAnim", 1f);
+            
+
+        }
+        else if (isPlayer != true)
+        {
+            onDamaged.Invoke(health);
+            health -= damage;
+        }
+        
+
 
         //disable circle collider
         //GetComponent<CircleCollider2D>().enabled = false;
@@ -91,6 +118,13 @@ public class HealthSystem1 : MonoBehaviour {
         }
     }
 
+    private void disabaleHurtAnim()
+    {
+        //set the hurt anim false 
+        
+        playerAnim.SetBool("hurtAnim", false);
+    }
+
     void enableCollider()
     {
         GetComponent<CircleCollider2D>().enabled = true;
@@ -106,4 +140,9 @@ public class HealthSystem1 : MonoBehaviour {
 
 		
 	}
+
+    public void resentResiliant()
+    {
+        playerIsResistant = false;
+    }
 }

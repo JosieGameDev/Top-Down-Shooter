@@ -28,6 +28,9 @@ public class HurtTrigger : MonoBehaviour
 
     public float resetTime = 3f;
 
+    public bool giveBounceback = false;
+    public float bounce = 3f;
+
    
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -39,11 +42,23 @@ public class HurtTrigger : MonoBehaviour
             //Debug.Log("colliding w player");
             collision.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
 
-        
+            if (giveBounceback == true)
+            {
+                GameObject player = collision.gameObject;
+                player.GetComponent<Rigidbody2D>().AddForce(transform.up * bounce);
+            }
+
+
             GetComponent<Collider2D>().enabled = false;
 
         
             Invoke("ResetTrigger", resetTime);
+
+            if (giveBounceback == true)
+            {
+                GameObject player = collision.gameObject;
+                player.GetComponent<Rigidbody2D>().AddForce(transform.up * bounce);
+            }
 
         }
         else

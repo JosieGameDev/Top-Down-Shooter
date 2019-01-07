@@ -12,13 +12,13 @@ public class Enemy : MonoBehaviour {
     public EnemySpawnedEvent onSpawn;
     //public Rigidbody2D Robot;
     public SpriteRenderer RobotSprite;
-    public GameObject player;
+    GameObject player;
     public GameObject robot;
     
 
 	// Use this for initialization
 	void Start () {
-        GameObject player = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("Player");
         onSpawn.Invoke(player.transform);
         RobotSprite.flipX = false;
 	}

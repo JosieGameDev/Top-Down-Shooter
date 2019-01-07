@@ -12,7 +12,7 @@ public class MoveTowardsObject : MonoBehaviour {
     public float range;
     public bool staysAtRange = false;
     public float rangedDistance = 2f;
-    public Transform moveTo;
+    Transform moveTo;
     Animator walkAnim;
     public bool isWalking;
 
@@ -21,6 +21,7 @@ public class MoveTowardsObject : MonoBehaviour {
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player");
         transform = player.transform;
+        moveTo = player.transform;
         currentPos = GetComponent<Transform>();
         walkAnim = GetComponent<Animator>();
         isWalking = false;

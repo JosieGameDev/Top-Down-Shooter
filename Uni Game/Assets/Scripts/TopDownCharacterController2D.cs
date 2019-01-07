@@ -50,7 +50,7 @@ public class TopDownCharacterController2D : MonoBehaviour {
         else
         {
 
-            Debug.Log("playerWalkingBroken");
+            //Debug.Log("playerWalkingBroken");
             playerWalking = false;
             animator.SetBool("playerWalking", playerWalking);
         }
