@@ -27,6 +27,8 @@ public class BigBoss : MonoBehaviour {
             spawnBaddies();
             spawnBaddies();
             spawnBaddies();
+            spawnBaddies();
+            spawnBaddies();
             hasPlayed = true;
         }
 	}
@@ -57,6 +59,12 @@ public class BigBoss : MonoBehaviour {
     private void releaseBombs()
     {
         // for mode 2 throw bombs which explode after a small delay
+
+        //get a random location within the big boss map
+        Transform spawn1 = randomSpawnPt();
+
+        //create a bomb here
+
     }
 
     private void shootLaser()
