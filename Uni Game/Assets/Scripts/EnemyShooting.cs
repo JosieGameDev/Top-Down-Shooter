@@ -17,7 +17,9 @@ public class EnemyShooting : MonoBehaviour
 
     //setting up animations
     Animator gunAnim;
-    
+
+    //sounds
+    public AudioSource enemyShootAC;
 
     //Vector2 speed = new Vector2(10f, 10f);
 
@@ -26,6 +28,7 @@ public class EnemyShooting : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         gunAnim = GetComponent<Animator>();
+
         
     }
 
@@ -82,5 +85,10 @@ public class EnemyShooting : MonoBehaviour
     void Fire()
     {
         Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+        if(enemyShootAC.isPlaying == false)
+        {
+            enemyShootAC.Play();
+        }
+        
     }
 }

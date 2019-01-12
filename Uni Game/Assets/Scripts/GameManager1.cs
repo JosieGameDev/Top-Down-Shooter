@@ -12,8 +12,16 @@ public class GameManager1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        pauseWithEsc();
 	}
+
+    public void pauseWithEsc()
+    {
+        if(Input.GetKeyDown("escape"))
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
+    }
 
     public void StartGame()
     {
@@ -38,4 +46,6 @@ public class GameManager1 : MonoBehaviour {
     {
         SceneManager.LoadScene("Tutorial endScreen");
     }
+
+
 }

@@ -8,6 +8,10 @@ TagManager:
   - Wall
   - topL
   - butR
+  - bomb
+  - bombHurtTrigger
+  - laser
+  - door
   layers:
   - Default
   - TransparentFX

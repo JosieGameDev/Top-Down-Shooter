@@ -15,6 +15,8 @@ public class MoveTowardsObject : MonoBehaviour {
     Transform moveTo;
     Animator walkAnim;
     public bool isWalking;
+    public bool isPurpleBoi;
+    public AudioSource purpleBoiWalkAC;
 
 
 	// Use this for initialization
@@ -41,6 +43,14 @@ public class MoveTowardsObject : MonoBehaviour {
             if (distance <= range)
             {
                 walkAnim.SetBool("isWalking", true);
+                if(isPurpleBoi == true)
+                {
+                    if(purpleBoiWalkAC.isPlaying == false)
+                    {
+                        purpleBoiWalkAC.Play();
+                        Debug.Log("playingwalksound");
+                    }
+                }
                 if (staysAtRange == false)
                 {
                     currentPos.position = Vector3.MoveTowards(currentPos.position, transform.position, speed * 0.1f);
@@ -65,6 +75,8 @@ public class MoveTowardsObject : MonoBehaviour {
             }
             
         }
+        
+
 	}
 
     //public void SetTarget(Transform newTarget)

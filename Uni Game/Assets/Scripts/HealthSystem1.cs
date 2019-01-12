@@ -26,6 +26,9 @@ public class HealthSystem1 : MonoBehaviour {
     public float playerBuffTime = 0.5f;
     public Animator playerAnim;
 
+    //damage sound
+    public AudioSource enemyHurtAC;
+    public AudioSource playerHurtAC;
 
 
 
@@ -40,6 +43,8 @@ public class HealthSystem1 : MonoBehaviour {
             playerIsResistant = true;
             Invoke("resentResiliant", playerBuffTime);
             health -= damage;
+            playerHurtAC.Play();
+
 
 
             //set up the anim
@@ -53,6 +58,10 @@ public class HealthSystem1 : MonoBehaviour {
         {
             onDamaged.Invoke(health);
             health -= damage;
+            if(enemyHurtAC.isPlaying == false)
+            {
+                enemyHurtAC.Play();
+            }
         }
         
 

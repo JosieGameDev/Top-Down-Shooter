@@ -6,6 +6,11 @@ public class BigBoss : MonoBehaviour {
 
     //vars 
     GameObject player;
+    public float modeSwitchTime = 10f;
+    string currentMethod;
+    public Animator bigBossAnimator;
+    public float nextModeChange = 0;
+    public float modeChangeRate = 5;
 
     //mode1 vars
     public static Random r = new Random();
@@ -13,40 +18,123 @@ public class BigBoss : MonoBehaviour {
     public GameObject spawnPrefab;
     public GameObject spawnBadPrefab;
     bool hasPlayed = false;
-	// Use this for initialization
-	void Start () {
+
+    //mode 2 vars
+    public GameObject bombPrefab;
+
+
+    //mode 3 vars
+    public GameObject laserPrefab;
+    public Transform laserSpawn;
+    Transform playerTransform;
+    public float nextFire = 0;
+    public float fireRate = 0.1f;
+    GameObject laserLine;
+    Vector3[] laserLinePts = new Vector3[2];
+    
+
+    // Use this for initialization
+    void Start () {
+        
         player = GameObject.FindWithTag("Player");
-		
+        currentMethod = "shootLaser";
+        StartCoroutine("BossFunction");
+        laserLine = GameObject.FindGameObjectWithTag("laser");
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        
-		if(player.transform.position.x > this.transform.position.x && hasPlayed == false)
+
+        //invoke current mode 
+        //Invoke(currentMethod, 2f);
+
+        //set  aniamtor
+        if (currentMethod == "spawnBaddies")
         {
-            spawnBaddies();
-            spawnBaddies();
-            spawnBaddies();
-            spawnBaddies();
-            spawnBaddies();
-            hasPlayed = true;
+            bigBossAnimator.SetBool("isSpawn", true);
+            bigBossAnimator.SetBool("isShoot", false);
+            bigBossAnimator.SetBool("isBombing", false);
         }
-	}
+        if (currentMethod == "shootLaser")
+        {
+            bigBossAnimator.SetBool("isSpawn", false);
+            bigBossAnimator.SetBool("isShoot", true);
+            bigBossAnimator.SetBool("isBombing", false);
+        }
+        if (currentMethod == "releaseBombs")
+        {
+            bigBossAnimator.SetBool("isSpawn", false);
+            bigBossAnimator.SetBool("isShoot", false);
+            bigBossAnimator.SetBool("isBombing", true);
+        }
+
+        //change which mdoe its on at diff time intevals
+        if(Time.time > nextModeChange)
+        {
+            nextModeChange = Time.time + modeChangeRate;
+            modeSwitcher();
+            
+            Debug.Log(currentMethod);
+        }
+
+
+        
+    }
+
+    public IEnumerator BossFunction()
+    {
+        while (true)
+        {
+            if (currentMethod != "shootLaser")
+            {
+                Invoke(currentMethod, 0);
+                yield return new WaitForSeconds(1f);
+            }
+            else if (currentMethod == "shootLaser")
+            {
+                Invoke(currentMethod, 0);
+                yield return new WaitForSeconds(0.01f);
+
+            }
+        }
+    }
+
+    private void modeSwitcher()
+    {
+        //when called it switches to next mode in sequence 
+        Debug.Log("switchmode");
+
+        if (currentMethod == "spawnBaddies")
+        {
+            currentMethod = "shootLaser";
+        }
+        else if(currentMethod == "shootLaser")
+        {
+            currentMethod = "releaseBombs";
+        }
+        else if(currentMethod == "releaseBombs")
+        {
+            currentMethod = "spawnBaddies";
+        }
+        else
+        {
+            Debug.Log("didnt change mode");
+        }
+    }
+
 
     private void spawnBaddies()
     {
         // for mode 1 create small enemies around the arena
+
 
         //get a random location within the big boss map
         Transform spawn1 = randomSpawnPt();
     
         //create spawn anim here
         Instantiate(spawnPrefab, spawn1.position, spawn1.rotation);
-
         
-       
-
-
     }
 
     private void changeToBaddies(GameObject spawnAnim)
@@ -64,14 +152,71 @@ public class BigBoss : MonoBehaviour {
         Transform spawn1 = randomSpawnPt();
 
         //create a bomb here
-
+        Instantiate(bombPrefab, spawn1.position, spawn1.rotation);
     }
 
     private void shootLaser()
     {
-        //for mode 3 shoot a big ol laser across the arena 
+        RaycastHit2D hit = Physics2D.Raycast(laserSpawn.transform.position, laserSpawn.transform.TransformDirection(Vector2.up));
+        laserLine.GetComponent<LineRenderer>().SetPosition(0, laserSpawn.transform.position);
+        LineRenderer line = laserLine.GetComponent<LineRenderer>();
+
+        if (hit.collider != null)
+        {
+
+            //add pts to the array
+            laserLinePts[0] = laserSpawn.transform.position;
+            laserLinePts[1] = hit.transform.position;
+
+            //set up the line renderer 
+            
+            laserLine.GetComponent<LineRenderer>().SetPosition(1, hit.point);
+            
+
+            Debug.Log("is hitting");
+          
+        }
+        else
+        {
+            laserLine.GetComponent<LineRenderer>().SetPosition(0, laserSpawn.transform.position);
+            laserLine.GetComponent<LineRenderer>().SetPosition(1, hit.point);
+
+        }
+
+
+        //RaycastHit2D hit;
+        //if(Physics2D.Raycast(laserSpawn.transform.position, laserSpawn.transform.TransformDirection(Vector2.up), )
+        //{
+        //    Debug.DrawRay(laserSpawn.transform.position, laserSpawn.transform.TransformDirection(Vector2.up) * hit.distance, Color.yellow);
+        //    Debug.Log("Did Hit");
+
+        //    //set up the line renderer 
+        //    laserLine.GetComponent<LineRenderer>().SetPosition(1, laserSpawn.transform.position);
+        //    laserLine.GetComponent<LineRenderer>().SetPosition(2, hit.transform.position);
+
+
+        //}
+        //else
+        //{
+        //    Debug.DrawRay(laserSpawn.transform.position, laserSpawn.transform.TransformDirection(Vector2.up) * 1000, Color.white);
+        //    Debug.Log("Did not Hit");
+
+
+        //}
+
+
+
+
+        //Debug.Log("running");
+
+        //Fire();
+
     }
 
+    private void Fire()
+    {
+        Instantiate(laserPrefab, laserSpawn.position, laserSpawn.rotation);
+    }
 
     private Transform randomSpawnPt()
     {

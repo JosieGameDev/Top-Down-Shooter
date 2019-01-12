@@ -12,6 +12,7 @@ public class MyIntEvent : UnityEvent<int> { }
 public class NextLevel : MonoBehaviour {
 
     public UnityEvent OnEnter;
+    public AudioSource beamAC;
 
     
 
@@ -23,7 +24,8 @@ public class NextLevel : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("its colliding");
-            OnEnter.Invoke();
+            beamAC.Play();
+            Invoke("activateOnEnterScript", 1f);
         }
     }
 
@@ -36,4 +38,9 @@ public class NextLevel : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void activateOnEnterScript()
+    {
+        OnEnter.Invoke();
+    }
 }

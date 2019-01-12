@@ -11,9 +11,13 @@ public class Doors : MonoBehaviour {
     public GameObject enemy5;
     public GameObject enemy6;
     public GameObject door;
+    public Transform target;
+    private bool shouldMove;
     Collider2D collider;
     //Animator animator;
-    bool doorOpening;
+    Animator doorAnimator;
+    AudioSource doorAC;
+    bool doorOpened;
 
 
     // Use this for initialization
@@ -21,13 +25,26 @@ public class Doors : MonoBehaviour {
         collider = GetComponent<Collider2D>();
         collider.enabled = true;
         //animator = GetComponent<Animator>();
-        doorOpening = false;
-
-	}
+        doorAnimator = GetComponent<Animator>();
+        doorAnimator.SetBool("doorOpening", false);
+        shouldMove = false;
+        door = GameObject.FindGameObjectWithTag("door");
+        doorAC = GetComponent<AudioSource>();
+        doorOpened = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
         disableDoors();
+
+        if (shouldMove)
+        {
+            //transform.position = Vector3.Lerp(transform.position, target.position, 0.01f);
+            //Debug.Log("running transform bit");
+            
+
+        }
+        
 	}
 
     void disableDoors()
@@ -36,9 +53,18 @@ public class Doors : MonoBehaviour {
             && enemy5 == null && enemy6 == null)
         {
             collider.enabled = false;
-            doorOpening = true;
-            //animator.SetBool("doorOpening", doorOpening);
+            shouldMove = true;
+            doorAnimator.SetBool("doorOpening", true);
+            //move doors along x to open 
+            if (doorOpened==false)
+            {
+                doorAC.Play();
+            }
+            doorOpened = true;
             
+
+
+
         }
             
 

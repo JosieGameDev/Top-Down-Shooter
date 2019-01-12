@@ -11,15 +11,20 @@ public class TopDownCharacterController2D : MonoBehaviour {
         
     SpriteRenderer spriterender;
 
+    //SOUND SHIT
+    public AudioSource playerAudioSourceSteps;
+
 
 	// Use this for initialization
 	void Start () {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        //playerAudioSourceSteps = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 
@@ -46,6 +51,15 @@ public class TopDownCharacterController2D : MonoBehaviour {
         {
             playerWalking = true;
             animator.SetBool("playerWalking", playerWalking);
+            playerAudioSourceSteps.Play();
+
+            if(playerAudioSourceSteps.isPlaying == false)
+            {
+                playerAudioSourceSteps.Play();
+                Debug.Log("playing steps");
+            }
+            
+            
         }
         else
         {
@@ -53,6 +67,7 @@ public class TopDownCharacterController2D : MonoBehaviour {
             //Debug.Log("playerWalkingBroken");
             playerWalking = false;
             animator.SetBool("playerWalking", playerWalking);
+            playerAudioSourceSteps.Pause();
         }
 	}
 }
