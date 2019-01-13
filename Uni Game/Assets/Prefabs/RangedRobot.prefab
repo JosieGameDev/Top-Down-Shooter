@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114628818579789336}
   - component: {fileID: 114177978452297082}
   - component: {fileID: 58438456824424292}
+  - component: {fileID: 50825009856839194}
   m_Layer: 0
   m_Name: RangedRobot
   m_TagString: Enemy
@@ -89,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1010303640873912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.17, y: 4.74, z: 0}
+  m_LocalPosition: {x: 16.160631, y: -4.4942636, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4508612772968050}
@@ -137,6 +138,26 @@ Transform:
   m_Father: {fileID: 4143146208820156}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!50 &50825009856839194
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1010303640873912}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1000
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!58 &58438456824424292
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -163,13 +184,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e039606729c27a74da08297bb6b359b4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.181
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -465,6 +486,7 @@ MonoBehaviour:
   playerBuffTime: 0.5
   playerAnim: {fileID: 0}
   enemyHurtAC: {fileID: 82825651030772428}
+  playerHurtAC: {fileID: 0}
 --- !u!212 &212701602396278810
 SpriteRenderer:
   m_ObjectHideFlags: 1

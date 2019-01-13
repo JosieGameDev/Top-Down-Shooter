@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager1 : MonoBehaviour {
 
+    public AudioSource playerDeadAC;
 	// Use this for initialization
 	void Start () {
 		
@@ -30,6 +31,18 @@ public class GameManager1 : MonoBehaviour {
 
     public void endGame()
     {
+        StartCoroutine("openGameOver");
+        if (playerDeadAC.isPlaying == false)
+        {
+            playerDeadAC.Play();
+        }
+           
+    }
+    public IEnumerator openGameOver()
+    {
+        Debug.Log("running enum");
+        yield return new WaitForSeconds(1f); 
+        Debug.
         SceneManager.LoadScene("Game Over");
     }
 
@@ -45,6 +58,18 @@ public class GameManager1 : MonoBehaviour {
     public void EndTutorial()
     {
         SceneManager.LoadScene("Tutorial endScreen");
+    }
+    public void LoadLv2()
+    {
+        SceneManager.LoadScene("Level Two");
+    }
+    public void LoadLvl3()
+    {
+        SceneManager.LoadScene("Level Three");
+    }
+    public void LoadBoss()
+    {
+        SceneManager.LoadScene("Boss Level");
     }
 
 

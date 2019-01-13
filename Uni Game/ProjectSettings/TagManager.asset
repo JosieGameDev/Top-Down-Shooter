@@ -12,6 +12,7 @@ TagManager:
   - bombHurtTrigger
   - laser
   - door
+  - DieAS
   layers:
   - Default
   - TransparentFX

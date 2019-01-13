@@ -11,7 +11,7 @@ public class MoveTowardsObject : MonoBehaviour {
     float distance;
     public float range;
     public bool staysAtRange = false;
-    public float rangedDistance = 2f;
+    public float rangedDistance = 3f;
     Transform moveTo;
     Animator walkAnim;
     public bool isWalking;

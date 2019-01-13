@@ -21,7 +21,7 @@ public class DamageTrailDop : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        print(Time.time > nextDrop);
+        //print(Time.time > nextDrop);
 		if (Time.time > nextDrop)
         {
             nextDrop = Time.time + dropRate;
@@ -30,14 +30,14 @@ public class DamageTrailDop : MonoBehaviour {
         }
         else
         {
-            Debug.Log("not happening ");
+            //Debug.Log("not happening ");
         }
         
 	}
 
     void Drop()
     {
-        print("dropping...");
+        //print("dropping...");
         Instantiate(hurtTrail, damageSpwnPt.position, damageSpwnPt.rotation);
     }
 }

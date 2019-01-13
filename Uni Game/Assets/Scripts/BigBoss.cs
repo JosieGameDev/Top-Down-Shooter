@@ -11,6 +11,7 @@ public class BigBoss : MonoBehaviour {
     public Animator bigBossAnimator;
     public float nextModeChange = 0;
     public float modeChangeRate = 5;
+    public AudioSource bigBoiModeChangeAC;
 
     //mode1 vars
     public static Random r = new Random();
@@ -86,24 +87,30 @@ public class BigBoss : MonoBehaviour {
     {
         while (true)
         {
-            if (currentMethod != "shootLaser")
-            {
-                Invoke(currentMethod, 0);
-                yield return new WaitForSeconds(1f);
-            }
-            else if (currentMethod == "shootLaser")
-            {
-                Invoke(currentMethod, 0);
-                yield return new WaitForSeconds(0.01f);
+            
+                if (currentMethod != "shootLaser")
+                {
+                    Invoke(currentMethod, 0);
+                    yield return new WaitForSeconds(1f);
+                }
+                else if (currentMethod == "shootLaser")
+                {
+                    Invoke(currentMethod, 0);
+                    yield return new WaitForSeconds(0.01f);
 
-            }
+                }
+            
         }
     }
 
     private void modeSwitcher()
     {
         //when called it switches to next mode in sequence 
-        Debug.Log("switchmode");
+        //play sound 
+        if(bigBoiModeChangeAC.isPlaying == false)
+        {
+            bigBoiModeChangeAC.Play();
+        }
 
         if (currentMethod == "spawnBaddies")
         {

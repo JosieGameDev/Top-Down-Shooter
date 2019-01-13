@@ -161,7 +161,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1985008849670702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.739964, y: -25.25, z: 0}
+  m_LocalPosition: {x: 8.61825, y: 4.3159976, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 4041196155036616}
@@ -216,13 +216,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: db27f90869f01a041b2349bac48728dd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.086
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 243
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -406,13 +406,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f9ec1e58c0644dc419f44f8d6b9db1de, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.134
   m_Pitch: 1.43
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 211
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -614,6 +614,7 @@ MonoBehaviour:
   playerBuffTime: 0.5
   playerAnim: {fileID: 0}
   enemyHurtAC: {fileID: 82904628918874888}
+  playerHurtAC: {fileID: 0}
 --- !u!114 &114837889629627428
 MonoBehaviour:
   m_ObjectHideFlags: 1

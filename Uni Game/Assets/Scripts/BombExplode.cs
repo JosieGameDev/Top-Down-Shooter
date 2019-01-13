@@ -5,7 +5,7 @@ using UnityEngine;
 public class BombExplode : MonoBehaviour {
 
     //damage stuff
-    GameObject explosionHurtTrigger;
+    public GameObject explosionHurtTrigger;
     public int damage = 2;
     public float timeCountdown = 2.1f;
     GameObject bomb;
@@ -43,7 +43,10 @@ public class BombExplode : MonoBehaviour {
     private void explodeBomb()
     {
         Debug.Log("playing ex method");
-        bomb.GetComponent<Collider2D>().enabled = true;
+        if (bomb != null)
+        {
+            bomb.GetComponent<Collider2D>().enabled = true;
+        }
         bombAnimator.SetBool("isExploding", true);
         if(bombExplosion.isPlaying ==false)
         {
