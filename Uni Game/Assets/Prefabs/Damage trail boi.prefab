@@ -11,21 +11,6 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1528723878369290}
   m_IsPrefabParent: 1
---- !u!1 &1069954171439090
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4169553818448898}
-  m_Layer: 9
-  m_Name: hurtspwnpt
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1199836854463474
 GameObject:
   m_ObjectHideFlags: 0
@@ -38,6 +23,21 @@ GameObject:
   - component: {fileID: 58805350785434654}
   m_Layer: 12
   m_Name: hurt Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1236470502787554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4898814383189698}
+  m_Layer: 9
+  m_Name: damageSpawnTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,8 +98,8 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4147535748087508}
-  - {fileID: 4169553818448898}
   - {fileID: 4551015978727264}
+  - {fileID: 4898814383189698}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -116,19 +116,6 @@ Transform:
   m_Father: {fileID: 4073805688918194}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4169553818448898
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1069954171439090}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4073805688918194}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4551015978727264
 Transform:
   m_ObjectHideFlags: 1
@@ -137,6 +124,19 @@ Transform:
   m_GameObject: {fileID: 1969888311828660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4073805688918194}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4898814383189698
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1236470502787554}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.22, y: -0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4073805688918194}
@@ -217,7 +217,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f9ec1e58c0644dc419f44f8d6b9db1de, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -449,8 +449,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: EnemySpawnedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  RobotSprite: {fileID: 212734096892786946}
-  robot: {fileID: 1528723878369290}
 --- !u!114 &114253222983347538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -486,8 +484,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: EnemySpawnedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  RobotSprite: {fileID: 0}
-  robot: {fileID: 0}
 --- !u!114 &114537504029484946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -587,7 +583,7 @@ MonoBehaviour:
   nextDrop: 1
   dropRate: 0.5
   hurtTrail: {fileID: 1670746728448414, guid: ecc5f42a88b5aa3469da88a85caf1b0b, type: 2}
-  damageSpwnPt: {fileID: 4169553818448898}
+  damageSpwnPt: {fileID: 4898814383189698}
 --- !u!212 &212734096892786946
 SpriteRenderer:
   m_ObjectHideFlags: 1

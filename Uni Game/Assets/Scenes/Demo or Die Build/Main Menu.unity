@@ -2707,7 +2707,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -3052,6 +3052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839861b61956af8439bfcc86819bf31c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerDeadAC: {fileID: 0}
 --- !u!114 &1066671843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3186,6 +3187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839861b61956af8439bfcc86819bf31c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerDeadAC: {fileID: 0}
 --- !u!4 &1155964497
 Transform:
   m_ObjectHideFlags: 0

@@ -42,7 +42,7 @@ public class GameManager1 : MonoBehaviour {
     {
         Debug.Log("running enum");
         yield return new WaitForSeconds(1f); 
-        Debug.
+       
         SceneManager.LoadScene("Game Over");
     }
 
@@ -70,6 +70,10 @@ public class GameManager1 : MonoBehaviour {
     public void LoadBoss()
     {
         SceneManager.LoadScene("Boss Level");
+    }
+    public void LoadWin()
+    {
+        SceneManager.LoadScene("Win Screen");
     }
 
 

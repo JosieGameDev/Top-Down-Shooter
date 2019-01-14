@@ -20,6 +20,7 @@ public class HealthSystem1 : MonoBehaviour {
     public Image hearts1;
     public bool isPlayer = false;
     public bool playerIsResistant = false;
+    public bool isBigBoss;
 
     //public bool hurtAnim = false;
 
@@ -62,6 +63,8 @@ public class HealthSystem1 : MonoBehaviour {
             {
                 enemyHurtAC.Play();
             }
+
+            
         }
         
 

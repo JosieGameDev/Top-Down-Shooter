@@ -12,6 +12,33 @@ public class BigBoss : MonoBehaviour {
     public float nextModeChange = 0;
     public float modeChangeRate = 5;
     public AudioSource bigBoiModeChangeAC;
+    public AudioSource BigBoiDamageAS;
+    public bool hasStartedCombat = false;
+    HealthSystem1 bigBoyHealth;
+    int health;
+    int healthStg1 = 40;
+    int healthStg2 = 20;
+
+    bool mode1Active = true;
+    bool mode2Active = true;
+    bool mode3Active = true;
+
+    int ActiveModes = 3;
+
+    public AudioSource mode1DownAS;
+    public AudioSource mode2DownAS;
+    public AudioSource mode3DownAS;
+
+    public AudioSource deathMonologueAS;
+    public AudioSource deathExplosionAS;
+    GameManager1 gameManager;
+    AudioSource openingAS;  
+
+    //more anim bools
+    bool canSpawn = true;
+    bool canShoot = true;
+    bool canBomb = true;
+
 
     //mode1 vars
     public static Random r = new Random();
@@ -19,68 +46,147 @@ public class BigBoss : MonoBehaviour {
     public GameObject spawnPrefab;
     public GameObject spawnBadPrefab;
     bool hasPlayed = false;
+    public AudioSource mode1AS;
 
     //mode 2 vars
     public GameObject bombPrefab;
+    public AudioSource mode2AS;
 
 
-    //mode 3 vars
-    public GameObject laserPrefab;
-    public Transform laserSpawn;
+    //mode 3 vars- laser vers
+    //public GameObject laserPrefab;
+    //public Transform laserSpawn;
     Transform playerTransform;
     public float nextFire = 0;
     public float fireRate = 0.1f;
-    GameObject laserLine;
-    Vector3[] laserLinePts = new Vector3[2];
+    //GameObject laserLine;
+    //Vector3[] laserLinePts = new Vector3[2];
+
+    //mode 3 vars - cannon vers
+    public GameObject cannonBallPrefab;
+    public Transform cannonSpawnPt;
+
+    public AudioSource mode3AS;
     
 
     // Use this for initialization
     void Start () {
         
         player = GameObject.FindWithTag("Player");
-        currentMethod = "shootLaser";
-        StartCoroutine("BossFunction");
-        laserLine = GameObject.FindGameObjectWithTag("laser");
-        
-	}
+        currentMethod = "shootCannon";
+        //StartCoroutine("BossFunction");
+        //laserLine = GameObject.FindGameObjectWithTag("laser");
+        bigBoyHealth = GetComponent<HealthSystem1>();
+        health = bigBoyHealth.health;
+        gameManager = GetComponent<GameManager1>();
+        openingAS = GameObject.FindWithTag("openAS").GetComponent<AudioSource>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
-        //invoke current mode 
-        //Invoke(currentMethod, 2f);
+        if (health> 0)
+        {
 
-        //set  aniamtor
-        if (currentMethod == "spawnBaddies")
-        {
-            bigBossAnimator.SetBool("isSpawn", true);
-            bigBossAnimator.SetBool("isShoot", false);
-            bigBossAnimator.SetBool("isBombing", false);
-        }
-        if (currentMethod == "shootLaser")
-        {
-            bigBossAnimator.SetBool("isSpawn", false);
-            bigBossAnimator.SetBool("isShoot", true);
-            bigBossAnimator.SetBool("isBombing", false);
-        }
-        if (currentMethod == "releaseBombs")
-        {
-            bigBossAnimator.SetBool("isSpawn", false);
-            bigBossAnimator.SetBool("isShoot", false);
-            bigBossAnimator.SetBool("isBombing", true);
-        }
-
-        //change which mdoe its on at diff time intevals
-        if(Time.time > nextModeChange)
-        {
-            nextModeChange = Time.time + modeChangeRate;
-            modeSwitcher();
             
-            Debug.Log(currentMethod);
-        }
 
+            //start attack if it hasnt already
+            if (hasStartedCombat == false)
+            {
+                if (player.transform.position.x > 8)
+                {
+                    StartCoroutine("BossFunction");
+                    hasStartedCombat = true;
+                }
+            }
+            //change which mdoe its on at diff time intevals
+            if (Time.time > nextModeChange)
+            {
+                nextModeChange = Time.time + modeChangeRate;
+                modeSwitcher();
+
+                //Debug.Log(currentMethod);
+            }
+            setAnimBools();
+
+            if (hasStartedCombat == true)
+            {
+                //get current health and remove mode if need be 
+                health = bigBoyHealth.health;
+                removeModes();
+
+                //set  aniamtor
+                if (currentMethod == "spawnBaddies")
+                {
+                    bigBossAnimator.SetBool("isSpawn", true);
+                    bigBossAnimator.SetBool("isShoot", false);
+                    bigBossAnimator.SetBool("isBombing", false);
+                    bigBossAnimator.SetBool("RECHECK", true);
+
+                    Invoke("resetRecheckAnimBool", .01f);
+                }
+                if (currentMethod == "shootCannon")
+                {
+                    bigBossAnimator.SetBool("isSpawn", false);
+                    bigBossAnimator.SetBool("isShoot", true);
+                    bigBossAnimator.SetBool("isBombing", false);
+                    bigBossAnimator.SetBool("RECHECK", true);
+
+                    Invoke("resetRecheckAnimBool", .01f);
+                }
+                if (currentMethod == "releaseBombs")
+                {
+                    bigBossAnimator.SetBool("isSpawn", false);
+                    bigBossAnimator.SetBool("isShoot", false);
+                    bigBossAnimator.SetBool("isBombing", true);
+                    bigBossAnimator.SetBool("RECHECK", true);
+
+                    Invoke("resetRecheckAnimBool", .01f);
+                }
+
+                
+                
+            }
+        }
+        else if (health <=0)
+        {
+            bigBossAnimator.SetBool("IsDying", true);
+            StopAllCoroutines();
+            if (deathMonologueAS.isPlaying == false)
+            {
+                deathMonologueAS.Play();
+            }
+            Invoke("destroyBossImage", 7f);
+
+        }
 
         
+    }
+
+
+    private void destroyBossImage()
+    {
+        bigBossAnimator.SetBool("isExploding", true);
+        deathExplosionAS.Play();
+        Invoke("turnOffBossSprite", 5f);
+        
+    }
+
+    private void turnOffBossSprite()
+    {
+        GetComponent<SpriteRenderer>().enabled = false;
+        Invoke("loadWin", 1f);
+    }
+    private void loadWin()
+    {
+        gameManager.LoadWin();
+    }
+
+    private void resetRecheckAnimBool()
+    {
+        
+        bigBossAnimator.SetBool("RECHECK", false);
     }
 
     public IEnumerator BossFunction()
@@ -88,19 +194,91 @@ public class BigBoss : MonoBehaviour {
         while (true)
         {
             
-                if (currentMethod != "shootLaser")
+                if (currentMethod != "shootCannon")
                 {
                     Invoke(currentMethod, 0);
-                    yield return new WaitForSeconds(1f);
+                    yield return new WaitForSeconds(2f);
                 }
-                else if (currentMethod == "shootLaser")
+                else if (currentMethod == "shootCannon")
                 {
                     Invoke(currentMethod, 0);
-                    yield return new WaitForSeconds(0.01f);
+                    yield return new WaitForSeconds(0.5f);
 
                 }
             
         }
+    }
+
+    //delete modes as health decreases
+    public void removeModes()
+    {
+        if (health < healthStg1 && ActiveModes == 3)
+        {
+            //bigBossAnimator.SetBool("RECHECK", true);
+
+            //Invoke("resetRecheckAnimBool", .01f);
+
+            Debug.Log(currentMethod);
+
+            if (currentMethod == "spawnBaddies")
+            {
+                //set this mode to inactive
+                mode1Active = false;
+                mode1DownAS.Play();
+                canSpawn = false;
+            }
+            else if (currentMethod == "shootCannon")
+            {
+                mode2Active = false;
+                mode2DownAS.Play();
+                canShoot = false;
+            }
+            else if (currentMethod == "releaseBombs")
+            {
+                mode3Active = false;
+                mode3DownAS.Play();
+                canBomb = false;
+            }
+
+            ActiveModes = 2;
+            
+        }
+        else if (health < healthStg2 && ActiveModes == 2)
+        {
+            if (currentMethod == "spawnBaddies")
+            {
+                //set this mode to inactive
+                mode1Active = false;
+                mode1DownAS.Play();
+                canSpawn = false;
+            }
+            else if (currentMethod == "shootCannon")
+            {
+                mode2Active = false;
+                mode2DownAS.Play();
+                canShoot = false;
+            }
+            else if (currentMethod == "releaseBombs")
+            {
+                mode3Active = false;
+                mode3DownAS.Play();
+                canBomb = false;
+            }
+
+            ActiveModes = 1;
+        }
+
+        //FDebug.Log(ActiveModes);
+    }
+
+    private void setAnimBools()
+    {
+        bigBossAnimator.SetBool("canShoot", canShoot);
+        bigBossAnimator.SetBool("canSpawn", canSpawn);
+        bigBossAnimator.SetBool("canBomb", canBomb);
+        //bigBossAnimator.SetBool("RECHECK", true);
+
+        //Invoke("resetRecheckAnimBool", .5f);
     }
 
     private void modeSwitcher()
@@ -114,19 +292,71 @@ public class BigBoss : MonoBehaviour {
 
         if (currentMethod == "spawnBaddies")
         {
-            currentMethod = "shootLaser";
+            if(mode2Active == true)
+            {
+                currentMethod = "shootCannon";
+                if(openingAS.isPlaying == false)
+                {
+                    mode2AS.Play();
+                }
+                
+            }
+            else if (mode3Active ==true)
+            {
+                currentMethod = "releaseBombs";
+                if (openingAS.isPlaying == false)
+                {
+                    mode3AS.Play();
+                }
+                
+            }
+            
         }
-        else if(currentMethod == "shootLaser")
+        else if(currentMethod == "shootCannon")
         {
-            currentMethod = "releaseBombs";
+            if (mode3Active == true)
+            {
+                currentMethod = "releaseBombs";
+                
+                if (openingAS.isPlaying == false)
+                {
+                    mode3AS.Play();
+                }
+            }
+            else if (mode1Active ==true)
+            {
+                currentMethod = "spawnBaddies";
+                if (openingAS.isPlaying == false)
+                {
+                    mode1AS.Play();
+                }
+               
+            }
         }
         else if(currentMethod == "releaseBombs")
         {
-            currentMethod = "spawnBaddies";
+            if (mode1Active == true)
+            {
+                currentMethod = "spawnBaddies";
+                if (openingAS.isPlaying == false)
+                {
+                    mode1AS.Play();
+                }
+                
+            }
+            else if (mode2Active == true)
+            {
+                currentMethod = "shootCannon";
+                if (openingAS.isPlaying == false)
+                {
+                    mode2AS.Play();
+                }
+                
+            }
         }
         else
         {
-            Debug.Log("didnt change mode");
+            //Debug.Log("didnt change mode");
         }
     }
 
@@ -162,33 +392,35 @@ public class BigBoss : MonoBehaviour {
         Instantiate(bombPrefab, spawn1.position, spawn1.rotation);
     }
 
-    private void shootLaser()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(laserSpawn.transform.position, laserSpawn.transform.TransformDirection(Vector2.up));
-        laserLine.GetComponent<LineRenderer>().SetPosition(0, laserSpawn.transform.position);
-        LineRenderer line = laserLine.GetComponent<LineRenderer>();
+    //FAILED LASER SYSTEM USING RAYCASTING
 
-        if (hit.collider != null)
-        {
+    //private void shootLaser()
+    //{
+    //    RaycastHit2D hit = Physics2D.Raycast(laserSpawn.transform.position, laserSpawn.transform.TransformDirection(Vector2.up));
+    //    laserLine.GetComponent<LineRenderer>().SetPosition(0, laserSpawn.transform.position);
+    //    LineRenderer line = laserLine.GetComponent<LineRenderer>();
 
-            //add pts to the array
-            laserLinePts[0] = laserSpawn.transform.position;
-            laserLinePts[1] = hit.transform.position;
+    //    if (hit.collider != null)
+    //    {
 
-            //set up the line renderer 
+    //        //add pts to the array
+    //        laserLinePts[0] = laserSpawn.transform.position;
+    //        laserLinePts[1] = hit.transform.position;
+
+    //        //set up the line renderer 
             
-            laserLine.GetComponent<LineRenderer>().SetPosition(1, hit.point);
+    //        laserLine.GetComponent<LineRenderer>().SetPosition(1, hit.point);
             
 
-            Debug.Log("is hitting");
+    //        Debug.Log("is hitting");
           
-        }
-        else
-        {
-            laserLine.GetComponent<LineRenderer>().SetPosition(0, laserSpawn.transform.position);
-            laserLine.GetComponent<LineRenderer>().SetPosition(1, hit.point);
+    //    }
+    //    else
+    //    {
+    //        laserLine.GetComponent<LineRenderer>().SetPosition(0, laserSpawn.transform.position);
+    //        laserLine.GetComponent<LineRenderer>().SetPosition(1, hit.point);
 
-        }
+    //    }
 
 
         //RaycastHit2D hit;
@@ -218,11 +450,19 @@ public class BigBoss : MonoBehaviour {
 
         //Fire();
 
+    //}
+
+    //BIG BOY BULLET MODE AS A REPLACEMENT FOR LASER
+
+    private void shootCannon()
+    {
+        Instantiate(cannonBallPrefab, cannonSpawnPt.position, cannonSpawnPt.rotation);
     }
+
 
     private void Fire()
     {
-        Instantiate(laserPrefab, laserSpawn.position, laserSpawn.rotation);
+        //Instantiate(laserPrefab, laserSpawn.position, laserSpawn.rotation);
     }
 
     private Transform randomSpawnPt()

@@ -11,16 +11,18 @@ public class Enemy : MonoBehaviour {
 
     public EnemySpawnedEvent onSpawn;
     //public Rigidbody2D Robot;
-    public SpriteRenderer RobotSprite;
+    SpriteRenderer RobotSprite;
     GameObject player;
-    public GameObject robot;
+    //public GameObject robot;
     
 
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindWithTag("Player");
         onSpawn.Invoke(player.transform);
+        RobotSprite = GetComponent<SpriteRenderer>();
         RobotSprite.flipX = false;
+        
 	}
 	
 	// Update is called once per frame
@@ -29,11 +31,11 @@ public class Enemy : MonoBehaviour {
 
         if (player != null)
         {
-            if (player.transform.position.x < robot.transform.position.x)
+            if (player.transform.position.x < transform.position.x)
             {
                 RobotSprite.flipX = true;
             }
-            else if (player.transform.position.x >= robot.transform.position.x)
+            else if (player.transform.position.x >= transform.position.x)
             {
                 RobotSprite.flipX = false;
             }

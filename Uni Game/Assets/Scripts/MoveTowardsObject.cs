@@ -48,7 +48,7 @@ public class MoveTowardsObject : MonoBehaviour {
                     if(purpleBoiWalkAC.isPlaying == false)
                     {
                         purpleBoiWalkAC.Play();
-                        Debug.Log("playingwalksound");
+                        //Debug.Log("playingwalksound");
                     }
                 }
                 if (staysAtRange == false)

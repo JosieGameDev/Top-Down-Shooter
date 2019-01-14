@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
     <Compile Include="Assets\Scripts\BigBoss.cs" />
+    <Compile Include="Assets\Scripts\BigBossDie.cs" />
     <Compile Include="Assets\Scripts\Bomb.cs" />
     <Compile Include="Assets\Scripts\BombExplode.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
