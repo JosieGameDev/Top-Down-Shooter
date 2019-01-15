@@ -17,7 +17,8 @@ AINT155 Games Workshop
 Unity 2D Zombie Shooter
 
 //references
-
+//pixel perfect camera script
+https://github.com/cmilr/DeadSimple-Pixel-Perfect-Camera
 //robot voice generator
 https://lingojam.com/RobotVoiceGenerator
 
