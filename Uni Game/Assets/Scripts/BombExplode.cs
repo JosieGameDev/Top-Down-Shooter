@@ -42,7 +42,7 @@ public class BombExplode : MonoBehaviour {
 
     private void explodeBomb()
     {
-        Debug.Log("playing ex method");
+        //Debug.Log("playing ex method");
         if (bomb != null)
         {
             bomb.GetComponent<Collider2D>().enabled = true;
@@ -65,7 +65,7 @@ public class BombExplode : MonoBehaviour {
 
     private void destroyBomb()
     {
-        Debug.Log("playing destroy method");
+        //Debug.Log("playing destroy method");
         //destroy the bomb
         GameObject.Destroy(GameObject.FindGameObjectWithTag("bomb"));
     }

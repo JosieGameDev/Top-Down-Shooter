@@ -47,6 +47,8 @@ public class BigBoss : MonoBehaviour {
     public GameObject spawnBadPrefab;
     bool hasPlayed = false;
     public AudioSource mode1AS;
+    int maximumEnemies = 10;
+    int currentEnemies;
 
     //mode 2 vars
     public GameObject bombPrefab;
@@ -54,13 +56,12 @@ public class BigBoss : MonoBehaviour {
 
 
     //mode 3 vars- laser vers
-    //public GameObject laserPrefab;
-    //public Transform laserSpawn;
+    
     Transform playerTransform;
     public float nextFire = 0;
     public float fireRate = 0.1f;
-    //GameObject laserLine;
-    //Vector3[] laserLinePts = new Vector3[2];
+    public AudioSource cannonShootAS;
+    
 
     //mode 3 vars - cannon vers
     public GameObject cannonBallPrefab;
@@ -85,6 +86,7 @@ public class BigBoss : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
 
         if (health> 0)
         {
@@ -364,13 +366,21 @@ public class BigBoss : MonoBehaviour {
     private void spawnBaddies()
     {
         // for mode 1 create small enemies around the arena
+        currentEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        //if theres not too many in scene already
+        if (currentEnemies <= maximumEnemies)
+        {
 
+            //get a random location within the big boss map
+            Transform spawn1 = randomSpawnPt();
 
-        //get a random location within the big boss map
-        Transform spawn1 = randomSpawnPt();
-    
-        //create spawn anim here
-        Instantiate(spawnPrefab, spawn1.position, spawn1.rotation);
+            //create spawn anim here
+            Instantiate(spawnPrefab, spawn1.position, spawn1.rotation);
+        }
+        else
+        {
+            //Debug.Log("too many in scene");
+        }
         
     }
 
@@ -457,6 +467,7 @@ public class BigBoss : MonoBehaviour {
     private void shootCannon()
     {
         Instantiate(cannonBallPrefab, cannonSpawnPt.position, cannonSpawnPt.rotation);
+        cannonShootAS.Play();
     }
 
 

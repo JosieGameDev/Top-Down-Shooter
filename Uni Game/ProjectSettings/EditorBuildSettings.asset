@@ -5,37 +5,40 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: a0bd85cd0caf715479123abc0f21a971
-  - enabled: 1
-    path: Assets/Scenes/Demo or Die Build/Game Over.unity
-    guid: ca1dca926c3148f4e8bc206be3e01310
-  - enabled: 1
-    path: Assets/Scenes/Demo or Die Build/Main Menu.unity
-    guid: 8aa415c059633a64d90af8360d8ff94b
-  - enabled: 1
-    path: Assets/Scenes/Demo or Die Build/Level One.unity
-    guid: 3a6c4d815fd20a74a9cc11f1c4abf637
-  - enabled: 1
-    path: Assets/Scenes/Demo or Die Build/Tutorial endScreen.unity
-    guid: 007d3198076654d44a8c80fdd5d3bf21
-  - enabled: 1
-    path: Assets/Scenes/Demo or Die Build/Level Two.unity
-    guid: 837bab070f1763c41b64c084c5bd31ba
   - enabled: 1
     path: Assets/Scenes/Demo or Die Build/Opening Screen.unity
     guid: fdb2faca4952c8a4391c153c34c31942
   - enabled: 1
+    path: Assets/Scenes/Demo or Die Build/Main Menu.unity
+    guid: 8aa415c059633a64d90af8360d8ff94b
+  - enabled: 1
     path: Assets/Scenes/Demo or Die Build/Tutorial.unity
     guid: 33403520583286240a8523f1380f9044
   - enabled: 1
-    path: Assets/Scenes/Demo or Die Build/Boss Level.unity
+    path: Assets/Scenes/Demo or Die Build/Tutorial endScreen.unity
+    guid: 007d3198076654d44a8c80fdd5d3bf21
+  - enabled: 1
+    path: Assets/Scenes/Demo or Die Build/Level One.unity
+    guid: 3a6c4d815fd20a74a9cc11f1c4abf637
+  - enabled: 1
+    path: Assets/Scenes/Demo or Die Build/Level Two.unity
+    guid: 837bab070f1763c41b64c084c5bd31ba
+  - enabled: 1
+    path: Assets/Scenes/Demo or Die Build/Level Three.unity
+    guid: fe5939343cd5caa49b3c6074cada6a80
+  - enabled: 1
+    path: Assets/Scenes/Demo or Die Build/Boss level.unity
     guid: 2124eea0b0f9e6d4cb59931418d4382e
   - enabled: 1
     path: Assets/Scenes/Demo or Die Build/Win Screen.unity
     guid: 535ca16af5d0a144d9a242a30ed7c88c
+  - enabled: 1
+    path: Assets/Scenes/Demo or Die Build/Game Over.unity
+    guid: ca1dca926c3148f4e8bc206be3e01310
   m_configObjects: {}
