@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager1 : MonoBehaviour {
 
     public AudioSource playerDeadAC;
+    public AudioSource buttonpressAS;
 	// Use this for initialization
 	void Start () {
 		
@@ -23,7 +24,7 @@ public class GameManager1 : MonoBehaviour {
             SceneManager.LoadScene("Main Menu");
         }
     }
-
+    
     public void StartGame()
     {
         SceneManager.LoadScene("Level One");
@@ -45,7 +46,7 @@ public class GameManager1 : MonoBehaviour {
        
         SceneManager.LoadScene("Game Over");
     }
-
+    
     public void BackToMainMenu()
     {
         SceneManager.LoadScene("Main Menu");
