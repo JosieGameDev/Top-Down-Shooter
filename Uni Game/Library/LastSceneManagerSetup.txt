@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Demo or Die Build/Level Three.unity
+- path: Assets/Scenes/Demo or Die Build/Boss level.unity
   isLoaded: 1
   isActive: 1
