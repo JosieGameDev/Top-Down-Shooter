@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Demo or Die Build/Game Over.unity
     guid: ca1dca926c3148f4e8bc206be3e01310
+  - enabled: 1
+    path: Assets/Scenes/Demo or Die Build/Credits.unity
+    guid: 3e863e42f27e3b644a72de7bf16b1c7c
   m_configObjects: {}

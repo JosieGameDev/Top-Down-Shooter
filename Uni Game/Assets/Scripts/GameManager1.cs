@@ -30,6 +30,11 @@ public class GameManager1 : MonoBehaviour {
         SceneManager.LoadScene("Level One");
     }
 
+    public void OpenCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
     public void endGame()
     {
         StartCoroutine("openGameOver");
