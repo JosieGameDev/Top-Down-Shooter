@@ -4,8 +4,11 @@ AINT155; repo for my top down game
 //name
 Josie Wood
 
+//student card no
+0022213724
+
 //student no
-Student Ref No: 105095221
+105095221
 
 //course name
 Computing and Games Development
